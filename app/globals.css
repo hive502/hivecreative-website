@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset for the sticky navbar when jumping to #anchors */
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-white text-brand-navy antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-orange/20 text-brand-navy;
+  }
+}
+
+@layer components {
+  /* Primary CTA — warm orange, this is the only button style that gets to pop. */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-orange px-7 py-4
+           text-base font-bold text-white shadow-cta transition-all duration-200
+           hover:-translate-y-0.5 hover:bg-brand-orange-dark hover:shadow-lg
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+           focus-visible:outline-brand-orange active:translate-y-0;
+  }
+
+  /* Secondary CTA — quiet navy outline. */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-brand-navy/15
+           bg-white px-7 py-4 text-base font-bold text-brand-navy shadow-sm transition-all
+           duration-200 hover:-translate-y-0.5 hover:border-brand-navy/30 hover:shadow-md
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+           focus-visible:outline-brand-navy active:translate-y-0;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-orange-tint px-4 py-1.5
+           text-xs font-extrabold uppercase tracking-[0.14em] text-brand-orange-dark;
+  }
+
+  .section-title {
+    @apply text-3xl font-extrabold leading-[1.15] tracking-tight text-brand-navy
+           sm:text-4xl lg:text-[2.75rem];
+  }
+
+  .section-lede {
+    @apply mx-auto max-w-2xl text-lg leading-relaxed text-brand-navy/70;
+  }
+}
