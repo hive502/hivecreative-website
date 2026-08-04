@@ -1,0 +1,22 @@
+{
+  // Cloudflare Workers deployment config.
+  //
+  // This project is a Next.js STATIC EXPORT: `npm run build` writes a complete
+  // static site to ./out, and this file tells `wrangler deploy` to upload that
+  // folder as the Worker's static assets.
+  //
+  // There is deliberately no "main" entry — there is no server-side code, so this
+  // is an assets-only Worker. Cloudflare serves the files directly from its edge
+  // network and caches them globally.
+  "name": "hivecreative-website",
+  "compatibility_date": "2026-08-04",
+  "assets": {
+    // Must match the output directory produced by `output: 'export'` in next.config.mjs.
+    "directory": "./out",
+
+    // Serve out/404.html for any URL that doesn't match a file, instead of a bare
+    // 404. Use "single-page-application" only if this ever becomes a client-routed
+    // SPA — it isn't, every page is prerendered.
+    "not_found_handling": "404-page"
+  }
+}
