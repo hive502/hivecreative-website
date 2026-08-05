@@ -28,6 +28,11 @@ import { portfolioShots, type PortfolioShot } from '@/lib/assets';
  * real screenshots exist. See `portfolioShots` in lib/assets.ts.
  */
 
+/**
+ * Source files are pre-cropped to exact ratios (21:10 desktop, 21:40 mobile) so the
+ * aspect boxes below never crop them further — every card lines up regardless of what
+ * the original screenshot measured.
+ */
 function Frame({ shot }: { shot: PortfolioShot }) {
   const isDesktop = shot.device === 'desktop';
 
@@ -35,7 +40,7 @@ function Frame({ shot }: { shot: PortfolioShot }) {
     <figure
       className={[
         'group/card relative shrink-0',
-        isDesktop ? 'w-[19rem] sm:w-[26rem] lg:w-[32rem]' : 'w-[10rem] sm:w-[12rem]',
+        isDesktop ? 'w-[20rem] sm:w-[28rem] lg:w-[34rem]' : 'w-[9rem] sm:w-[11rem]',
       ].join(' ')}
     >
       <div
@@ -55,17 +60,21 @@ function Frame({ shot }: { shot: PortfolioShot }) {
           </div>
         )}
 
-        <Image
-          src={shot.src}
-          alt={shot.alt}
-          width={isDesktop ? 1440 : 390}
-          height={isDesktop ? 900 : 844}
-          loading="lazy"
+        <div
           className={[
-            'h-auto w-full object-cover object-top',
-            isDesktop ? '' : 'rounded-[1.4rem]',
+            'relative overflow-hidden',
+            isDesktop ? 'aspect-[21/10]' : 'aspect-[21/40] rounded-[1.4rem]',
           ].join(' ')}
-        />
+        >
+          <Image
+            src={shot.src}
+            alt={shot.alt}
+            width={isDesktop ? 1600 : 660}
+            height={isDesktop ? 762 : 1257}
+            loading="lazy"
+            className="h-full w-full object-cover object-top"
+          />
+        </div>
       </div>
 
       <figcaption className="mt-4 text-center text-sm font-bold text-brand-navy/55">

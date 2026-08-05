@@ -122,30 +122,36 @@ export type PortfolioShot = {
  *   mobile  —  390×844 viewport, 3× device scale
  */
 export const portfolioShots: PortfolioShot[] = [
-  // {
-  //   src: '/images/portfolio/tax-desktop-hero.png',
-  //   alt: 'Homepage hero of a bilingual tax and insurance website',
-  //   label: 'Tax & Insurance — Homepage',
-  //   device: 'desktop',
-  // },
-  // {
-  //   src: '/images/portfolio/tax-desktop-services.png',
-  //   alt: 'Side-by-side tax and insurance service panels',
-  //   label: 'Dual-service layout',
-  //   device: 'desktop',
-  // },
-  // {
-  //   src: '/images/portfolio/tax-mobile-hero.png',
-  //   alt: 'The same homepage on a phone',
-  //   label: 'Mobile — Homepage',
-  //   device: 'mobile',
-  // },
-  // {
-  //   src: '/images/portfolio/tax-mobile-detail.png',
-  //   alt: 'Service detail screen on a phone',
-  //   label: 'Mobile — Services',
-  //   device: 'mobile',
-  // },
+  {
+    src: '/images/portfolio/osorio-desktop-hero.webp',
+    alt: 'Homepage of Osorio Insurance & Business, headlined "We protect what matters most", with consultation and call buttons',
+    label: 'Osorio Insurance & Business',
+    device: 'desktop',
+  },
+  {
+    src: '/images/portfolio/osorio-mobile-hero.webp',
+    alt: 'The Osorio Insurance & Business homepage on a phone',
+    label: 'Mobile — Homepage',
+    device: 'mobile',
+  },
+  {
+    src: '/images/portfolio/osorio-desktop-services.webp',
+    alt: 'Two side-by-side service cards, one for insurance and one for tax and business services',
+    label: 'Dual-service layout',
+    device: 'desktop',
+  },
+  {
+    src: '/images/portfolio/osorio-mobile-services.webp',
+    alt: 'The insurance service card on a phone',
+    label: 'Mobile — Services',
+    device: 'mobile',
+  },
+  {
+    src: '/images/portfolio/osorio-mobile-advisor.webp',
+    alt: 'An about section introducing the founder, on a phone',
+    label: 'Mobile — About',
+    device: 'mobile',
+  },
 ];
 
 export const site = {
