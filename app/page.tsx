@@ -86,7 +86,7 @@ export default function HomePage() {
             <ul className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 border-t border-brand-navy/10 pt-7">
               {[
                 { Icon: Clock, label: 'Launch in 2–3 weeks' },
-                { Icon: ShieldCheck, label: 'Care plan included' },
+                { Icon: ShieldCheck, label: 'Care Plan from $69/mo' },
                 { Icon: TrendingUp, label: 'Built to get found' },
               ].map(({ Icon, label }) => (
                 <li key={label} className="flex items-center gap-2 text-sm font-bold text-brand-navy/65">
@@ -316,7 +316,8 @@ export default function HomePage() {
           </div>
 
           <p className="mt-12 text-center text-sm font-semibold text-brand-navy/55">
-            Every build includes a Care Plan so your site stays secure, fast and up to date.{' '}
+            Every build comes with a Care Plan, billed separately from $69/mo, so your site
+            stays secure, fast and up to date.{' '}
             <Link href="#care" className="font-bold text-brand-orange underline-offset-4 hover:underline">
               See the care plans
             </Link>
@@ -329,8 +330,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Ongoing care"
-            title="Included Peace of Mind: Your Monthly Care Plan."
-            lede="A website is like a car—it needs regular maintenance to run smoothly. Every website we build comes with ongoing care so it stays secure, fast, and updated. You choose the level that fits you."
+            title="Ongoing Peace of Mind: Your Monthly Care Plan."
+            lede="A website is like a car—it needs regular maintenance to run smoothly. That's why every site we build comes with a Care Plan, billed monthly from $69 on top of your build price. You choose the level that fits you."
           />
 
           <div className="mt-16 grid items-stretch gap-8 lg:grid-cols-3 lg:gap-6">
