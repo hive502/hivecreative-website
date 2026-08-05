@@ -19,9 +19,10 @@ mkdir -p public/images
 CDN="https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh"
 
 # filename : source URL
+# The case study now uses a composite of real client screenshots committed under
+# public/images/portfolio/, so the generated laptop mockup is no longer fetched.
 ASSETS=(
   "hero-business-owner.png|$CDN/hf_20260804_215550_b1a59439-efc7-48b8-8e41-39bbeb160aec.png"
-  "case-study-mockup.png|$CDN/hf_20260804_215549_d5160b7d-744d-4dea-9c19-a4aad3a2fc86.png"
   "honeycomb-texture.svg|$CDN/hf_20260804_215549_c4e2149d-6cb9-4e2b-ac25-fde8be448d72.svg"
 )
 

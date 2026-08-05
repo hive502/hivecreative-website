@@ -66,12 +66,6 @@ export const images = {
     local: '/images/hero-business-owner.png',
     alt: 'A relaxed small business owner smiling at his laptop in a sunlit workshop office',
   },
-  caseStudy: {
-    remote:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260804_215549_d5160b7d-744d-4dea-9c19-a4aad3a2fc86.png',
-    local: '/images/case-study-mockup.png',
-    alt: 'A modern small business website shown on a laptop and a smartphone',
-  },
   honeycomb: {
     remote:
       'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260804_215549_c4e2149d-6cb9-4e2b-ac25-fde8be448d72.svg',
@@ -95,6 +89,18 @@ export const src = (key: keyof typeof images) => images[key][IMAGE_SOURCE];
 /* ------------------------------------------------------------------ */
 /* Portfolio marquee                                                    */
 /* ------------------------------------------------------------------ */
+
+/**
+ * Featured case study visual — a composite of the real Osorio desktop and mobile
+ * screenshots in device frames, with its own shadows baked in and a transparent
+ * background, so it drops onto any section colour.
+ *
+ * Rebuild it from the source screenshots rather than editing the composite.
+ */
+export const caseStudyImage = {
+  src: '/images/portfolio/osorio-case-study.webp',
+  alt: 'The Osorio Insurance & Business website shown on a laptop and a phone',
+} as const;
 
 export type PortfolioShot = {
   /** Path under /public/images/portfolio/ */

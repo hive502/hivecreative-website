@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Clock,
   Sparkles,
+  Tag,
 } from 'lucide-react';
 
 import SectionHeading from '@/components/SectionHeading';
@@ -20,7 +21,7 @@ import PricingCard from '@/components/PricingCard';
 import CarePlanCard from '@/components/CarePlanCard';
 import FaqAccordion from '@/components/FaqAccordion';
 import PortfolioAnimation from '@/components/PortfolioAnimation';
-import { src, images, site } from '@/lib/assets';
+import { src, images, site, caseStudyImage } from '@/lib/assets';
 import { painPoints, processSteps, buildPlans, carePlans, faqs } from '@/lib/content';
 
 const painIcons = [Wrench, UserX, Ghost];
@@ -110,18 +111,18 @@ export default function HomePage() {
               />
             </div>
 
-            {/* Floating proof chip */}
+            {/* Floating price chip — states the offer rather than an unverifiable stat */}
             <div
               className="absolute -bottom-6 -left-4 hidden items-center gap-3 rounded-2xl border
                          border-brand-navy/10 bg-white px-5 py-4 shadow-lift sm:flex lg:-left-8"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-orange-tint">
-                <TrendingUp className="h-5 w-5 text-brand-orange" aria-hidden />
+                <Tag className="h-5 w-5 text-brand-orange" aria-hidden />
               </span>
               <span>
-                <span className="block text-xl font-extrabold leading-none text-brand-navy">+40%</span>
+                <span className="block text-xl font-extrabold leading-none text-brand-navy">$499</span>
                 <span className="mt-1 block text-xs font-bold text-brand-navy/55">
-                  monthly enquiries
+                  one-off builds from
                 </span>
               </span>
             </div>
@@ -241,12 +242,12 @@ export default function HomePage() {
               aria-hidden
             />
             <Image
-              src={src('caseStudy')}
-              alt={images.caseStudy.alt}
-              width={2432}
-              height={1792}
+              src={caseStudyImage.src}
+              alt={caseStudyImage.alt}
+              width={1600}
+              height={900}
               sizes="(max-width: 1024px) 100vw, 48vw"
-              className="w-full rounded-2xl shadow-lift ring-1 ring-brand-navy/10"
+              className="w-full"
             />
           </div>
 
@@ -257,25 +258,31 @@ export default function HomePage() {
               align="left"
             />
 
-            <blockquote className="mt-8 border-l-4 border-brand-orange pl-6">
-              <p className="text-[1.05rem] leading-relaxed text-brand-navy/75">
-                &ldquo;We designed a clean, fast-loading website focused on getting their phone to
-                ring. Now, they have a digital storefront working for them 24/7, resulting in a{' '}
-                <strong className="font-extrabold text-brand-navy">
-                  40% increase in monthly inquiries
-                </strong>{' '}
-                and saving them hours of technical frustration.&rdquo;
-              </p>
-            </blockquote>
+            <p className="mt-8 text-[1.05rem] leading-relaxed text-brand-navy/75">
+              <strong className="font-extrabold text-brand-navy">
+                Osorio Insurance &amp; Business
+              </strong>{' '}
+              came to us with an awkward problem: two legally separate companies — one for
+              insurance, one for tax and business services — that had to live under one roof
+              without confusing customers or blurring the line between them.
+            </p>
 
+            <p className="mt-5 text-[1.05rem] leading-relaxed text-brand-navy/75">
+              We built a bilingual site that opens in English or Spanish, splits the two
+              businesses into clear side-by-side paths, and carries the compliance wording each
+              one needs. The phone number stays one tap away on every screen — in their
+              business, the call <em>is</em> the conversion.
+            </p>
+
+            {/* Facts about the build, not performance claims. */}
             <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-brand-navy/10 pt-8">
               {[
-                { value: '+40%', label: 'Monthly enquiries' },
-                { value: '24/7', label: 'Always working' },
-                { value: '0 hrs', label: 'Of your tech time' },
+                { value: 'EN / ES', label: 'Built in both languages' },
+                { value: 'Two', label: 'Businesses, one clear site' },
+                { value: 'One tap', label: 'To call from any page' },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <dt className="text-2xl font-extrabold tracking-tight text-brand-orange sm:text-3xl">
+                  <dt className="text-xl font-extrabold tracking-tight text-brand-orange sm:text-2xl">
                     {stat.value}
                   </dt>
                   <dd className="mt-1.5 text-xs font-bold leading-snug text-brand-navy/55 sm:text-sm">
@@ -286,7 +293,7 @@ export default function HomePage() {
             </dl>
 
             <Link href="#pricing" className="btn-primary mt-10">
-              I want results like this
+              I want a site like this
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
