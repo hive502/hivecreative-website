@@ -61,7 +61,7 @@ export const processSteps = [
   {
     step: '03',
     title: 'We Maintain It',
-    body: 'Once launched, you have total peace of mind. Your site comes with ongoing care—we handle updates, security, and backups every month.',
+    body: 'Once we launch, you have total peace of mind. Choose the monthly Care Plan that fits your business (starting at $69/mo), and we will handle your premium hosting, security updates, and daily backups so you never have to worry.',
   },
 ] as const;
 

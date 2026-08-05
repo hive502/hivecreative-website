@@ -48,7 +48,7 @@ export default function HomePage() {
           <div className="animate-fade-up">
             <p className="eyebrow">
               <Sparkles className="h-3.5 w-3.5" aria-hidden />
-              Websites for small business
+              Websites for Small Businesses
             </p>
 
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-brand-navy sm:text-5xl lg:text-[3.5rem]">
