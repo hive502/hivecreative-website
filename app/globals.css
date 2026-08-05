@@ -5,8 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* Offset for the sticky navbar when jumping to #anchors */
-    scroll-padding-top: 6rem;
+    /* Offset for the sticky navbar when jumping to #anchors.
+       Must be >= the header's at-rest height (py-6 + h-16 logo ≈ 7rem). */
+    scroll-padding-top: 8rem;
   }
 
   body {

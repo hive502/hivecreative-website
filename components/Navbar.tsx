@@ -7,13 +7,28 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 import { logo, site } from '@/lib/assets';
 import { navLinks } from '@/lib/content';
 
+/**
+ * Site header.
+ *
+ * Sizing follows the Knapsack pattern: a deliberately tall, generous bar on load so
+ * the branding is the first thing you see, which then compacts once the user starts
+ * scrolling so it stops eating vertical space.
+ *
+ *   at rest    py-6  + h-16 logo  ≈ 112px tall
+ *   scrolled   py-3  + h-11 logo  ≈  76px tall
+ *
+ * Both states are driven by one `scrolled` flag and a shared 300ms transition, so the
+ * bar and the logo shrink together rather than in two visible stages.
+ *
+ * If you change these, bump `scroll-padding-top` in app/globals.css to match the
+ * at-rest height, otherwise anchor jumps (#pricing, #faq) land under the header.
+ */
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // The bar sits transparent over the hero, then gains a soft shadow on scroll.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -23,12 +38,16 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? 'border-b border-brand-navy/10 bg-white/90 shadow-soft backdrop-blur-md'
-          : 'border-b border-transparent bg-white/60 backdrop-blur-sm'
+          ? 'border-b border-brand-navy/10 bg-white/95 shadow-soft backdrop-blur-md'
+          : 'border-b border-transparent bg-white/70 backdrop-blur-sm'
       }`}
     >
-      <nav className="container flex h-20 items-center justify-between gap-6">
-        {/* Full logo (icon + wordmark) — see lib/assets.ts to serve the Drive original */}
+      <nav
+        className={`container flex items-center justify-between gap-6 transition-all duration-300 ${
+          scrolled ? 'py-3' : 'py-6'
+        }`}
+      >
+        {/* Full logo (icon + wordmark). w-auto keeps the aspect ratio locked. */}
         <Link href="/" className="flex shrink-0 items-center" aria-label={`${site.name} home`}>
           <Image
             src={logo.full.src}
@@ -37,16 +56,18 @@ export default function Navbar() {
             height={logo.full.height}
             unoptimized={logo.unoptimized}
             priority
-            className="h-9 w-auto sm:h-10"
+            className={`w-auto transition-all duration-300 ${
+              scrolled ? 'h-10 sm:h-11' : 'h-12 sm:h-16'
+            }`}
           />
         </Link>
 
-        <ul className="hidden items-center gap-9 md:flex">
+        <ul className="hidden items-center gap-10 md:flex">
           {navLinks.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
-                className="relative text-[0.95rem] font-bold text-brand-navy/75 transition-colors
+                className="relative text-base font-bold text-brand-navy/75 transition-colors
                            hover:text-brand-navy after:absolute after:-bottom-1.5 after:left-0
                            after:h-0.5 after:w-0 after:rounded-full after:bg-brand-orange
                            after:transition-all hover:after:w-full"
@@ -58,7 +79,12 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:block">
-          <Link href="/#pricing" className="btn-primary px-6 py-3 text-[0.95rem]">
+          <Link
+            href="/#pricing"
+            className={`btn-primary transition-all duration-300 ${
+              scrolled ? 'px-6 py-3 text-[0.95rem]' : 'px-7 py-3.5 text-base'
+            }`}
+          >
             See Our Packages
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
@@ -72,7 +98,7 @@ export default function Navbar() {
           aria-label={open ? 'Close menu' : 'Open menu'}
           className="rounded-lg p-2 text-brand-navy transition-colors hover:bg-brand-navy-tint md:hidden"
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
       </nav>
 
@@ -87,7 +113,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-base font-bold text-brand-navy/80
+                  className="block rounded-lg px-3 py-3 text-lg font-bold text-brand-navy/80
                              transition-colors hover:bg-brand-navy-tint hover:text-brand-navy"
                 >
                   {link.label}
@@ -95,11 +121,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <Link
-            href="/#pricing"
-            onClick={() => setOpen(false)}
-            className="btn-primary mt-4 w-full"
-          >
+          <Link href="/#pricing" onClick={() => setOpen(false)} className="btn-primary mt-4 w-full">
             See Our Packages
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>

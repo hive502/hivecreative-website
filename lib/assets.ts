@@ -92,6 +92,62 @@ const IMAGE_SOURCE = 'local' as ImageSource;
 
 export const src = (key: keyof typeof images) => images[key][IMAGE_SOURCE];
 
+/* ------------------------------------------------------------------ */
+/* Portfolio marquee                                                    */
+/* ------------------------------------------------------------------ */
+
+export type PortfolioShot = {
+  /** Path under /public/images/portfolio/ */
+  src: string;
+  /** Describe what the screenshot shows — this is real alt text, not decoration. */
+  alt: string;
+  /** Caption rendered under the frame. */
+  label: string;
+  /** Controls the device frame and card width. */
+  device: 'desktop' | 'mobile';
+};
+
+/**
+ * Screenshots of real client work, shown in the <PortfolioAnimation /> marquee.
+ *
+ * The section renders NOTHING while this array is empty, so it is safe to deploy
+ * before the images exist. To switch it on: drop the files into
+ * public/images/portfolio/ and uncomment the entries below.
+ *
+ * Use genuine screenshots only. This section sits directly above a case study
+ * claiming a measured result, so invented mockups would misrepresent the work.
+ *
+ * Suggested capture settings for consistency:
+ *   desktop — 1440×900 viewport, 2× device scale
+ *   mobile  —  390×844 viewport, 3× device scale
+ */
+export const portfolioShots: PortfolioShot[] = [
+  // {
+  //   src: '/images/portfolio/tax-desktop-hero.png',
+  //   alt: 'Homepage hero of a bilingual tax and insurance website',
+  //   label: 'Tax & Insurance — Homepage',
+  //   device: 'desktop',
+  // },
+  // {
+  //   src: '/images/portfolio/tax-desktop-services.png',
+  //   alt: 'Side-by-side tax and insurance service panels',
+  //   label: 'Dual-service layout',
+  //   device: 'desktop',
+  // },
+  // {
+  //   src: '/images/portfolio/tax-mobile-hero.png',
+  //   alt: 'The same homepage on a phone',
+  //   label: 'Mobile — Homepage',
+  //   device: 'mobile',
+  // },
+  // {
+  //   src: '/images/portfolio/tax-mobile-detail.png',
+  //   alt: 'Service detail screen on a phone',
+  //   label: 'Mobile — Services',
+  //   device: 'mobile',
+  // },
+];
+
 export const site = {
   name: 'Hive Creative',
   domain: 'hivecreative.site',

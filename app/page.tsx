@@ -19,6 +19,7 @@ import ProcessStep from '@/components/ProcessStep';
 import PricingCard from '@/components/PricingCard';
 import CarePlanCard from '@/components/CarePlanCard';
 import FaqAccordion from '@/components/FaqAccordion';
+import PortfolioAnimation from '@/components/PortfolioAnimation';
 import { src, images, site } from '@/lib/assets';
 import { painPoints, processSteps, buildPlans, carePlans, faqs } from '@/lib/content';
 
@@ -224,6 +225,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ──────────── 3b. PORTFOLIO MARQUEE ────────────
+          Sits between the process and the case study: the reader has just been told
+          how it works, so this is the moment to show it working. Self-hides while
+          `portfolioShots` in lib/assets.ts is empty. */}
+      <PortfolioAnimation />
 
       {/* ───────────────── 4. FEATURED CASE STUDY ───────────────── */}
       <section id="work" className="bg-white py-20 sm:py-32">

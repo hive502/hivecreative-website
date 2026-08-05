@@ -53,10 +53,18 @@ const config: Config = {
           '0%': { maxHeight: '0', opacity: '0' },
           '100%': { maxHeight: '320px', opacity: '1' },
         },
+        /* The track holds two identical copies of the slide set side by side.
+           Shifting it left by exactly 50% lands copy 2 where copy 1 started, so the
+           loop restarts with no visible jump. */
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.6s ease-out both',
         'accordion-down': 'accordion-down 0.28s ease-out',
+        marquee: 'marquee 45s linear infinite',
       },
     },
   },
