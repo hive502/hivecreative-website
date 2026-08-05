@@ -52,8 +52,8 @@ export const logo = {
   },
   icon: {
     src: LOGO_SOURCE === 'drive' ? driveDirect(DRIVE_IDS.logoIcon, 512) : '/brand/logo-icon.png',
-    width: 512,
-    height: 515,
+    width: 256,
+    height: 256,
   },
   /** Drive can't be run through the Next image optimizer reliably. */
   unoptimized: LOGO_SOURCE === 'drive',
