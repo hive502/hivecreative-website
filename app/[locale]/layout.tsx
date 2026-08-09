@@ -17,15 +17,16 @@ import { locales, isLocale, type Locale } from '@/i18n';
  * font file on the critical path.
  *   400 body copy
  *   500 supporting labels and captions
- *   700 headings and buttons
- * Nothing in the codebase uses 600 or 800. If you add `font-semibold` or
- * `font-extrabold` the browser will synthesise it and the result looks smeared, so
- * add the weight here first.
+ *   700 buttons and card titles
+ *   800 display headings (font-extrabold)
+ * 800 is loaded because the headings genuinely use it. Without it the browser fakes
+ * the weight and large type looks smeared. Nothing uses 600, so font-semibold would
+ * be synthesised: add the weight here first if you ever need it.
  */
 const nunito = Nunito({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '700'],
+  weight: ['400', '500', '700', '800'],
   variable: '--font-nunito',
 });
 

@@ -19,12 +19,9 @@ mkdir -p public/images
 CDN="https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh"
 
 # filename : source URL
-# The case study now uses a composite of real client screenshots committed under
-# public/images/portfolio/, so the generated laptop mockup is no longer fetched.
+# Only the two generated pieces still in use are fetched. The four photographs live
+# directly in /public and are committed, so they are never downloaded.
 ASSETS=(
-  "hero-business-owner.png|$CDN/hf_20260804_215550_b1a59439-efc7-48b8-8e41-39bbeb160aec.png"
-  "geo-process.png|$CDN/hf_20260809_004022_906828b1-e25b-489a-b6ce-3652358263c3.png"
-  "geo-care.png|$CDN/hf_20260809_004022_af93a9c0-2ee0-445a-9fd4-5eb04d881d20.png"
   "geo-texture.png|$CDN/hf_20260809_004022_811ba3d7-4291-4e91-ab32-df6979e05ee9.png"
   "geo-social.png|$CDN/hf_20260809_004022_3527910b-1c76-4df9-9f86-7de47666b05d.png"
 )

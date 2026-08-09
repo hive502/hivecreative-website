@@ -84,7 +84,7 @@ export default function Logo({
           <polygon
             key={`${c.row}-${c.col}`}
             points={hexPoints(c.x, c.y, R * GAP)}
-            fill={c.accent ? '#0F4993' : '#FFFFFF'}
+            fill={c.accent ? '#2B3C5A' : '#FFFFFF'}
           />
         ))}
       </svg>

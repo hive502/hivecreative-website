@@ -26,45 +26,38 @@ export const logo = {
   icon: '/brand/logo-icon.png',
 } as const;
 
+/**
+ * Client-supplied photography, committed straight to /public.
+ *
+ * All four are portrait 2:3 (1152x1728). Every slot that shows them uses an aspect box
+ * with object-cover, so the crop is deliberate and consistent rather than whatever the
+ * container happens to be.
+ */
+export const photos = {
+  hero: '/hero-desk.jpg',
+  process: '/process-keyboard.jpg',
+  about: '/about-office.jpg',
+  mobile: '/mobile-mockup.jpg',
+} as const;
+
 export const images = {
-  hero: {
-    remote:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260804_215550_b1a59439-efc7-48b8-8e41-39bbeb160aec.png',
-    local: '/images/hero-business-owner.png',
-  },
-  /** Three ascending hexagonal tiles. Sits beside the 3-step process. */
-  process: {
-    remote:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260809_004022_906828b1-e25b-489a-b6ce-3652358263c3.png',
-    local: '/images/geo-process.png',
-  },
-  /** A navy prism sheltered inside a honeycomb frame. Sits beside the care plans. */
-  care: {
-    remote:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260809_004022_af93a9c0-2ee0-445a-9fd4-5eb04d881d20.png',
-    local: '/images/geo-care.png',
-  },
-  /** Near-invisible embossed honeycomb, used at low opacity behind sections. */
-  texture: {
-    remote:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260809_004022_811ba3d7-4291-4e91-ab32-df6979e05ee9.png',
-    local: '/images/geo-texture.png',
-  },
   /** Social share card. Never rendered on the page itself. */
   social: {
     remote:
       'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260809_004022_3527910b-1c76-4df9-9f86-7de47666b05d.png',
     local: '/images/geo-social.png',
   },
+  /** Near-invisible embossed honeycomb, used at low opacity behind the process band. */
+  texture: {
+    remote:
+      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260809_004022_811ba3d7-4291-4e91-ab32-df6979e05ee9.png',
+    local: '/images/geo-texture.png',
+  },
 } as const;
 
 type ImageSource = 'local' | 'remote';
 
-/**
- * 'local' is correct for every build: the `prebuild` script guarantees these files
- * exist before next build runs, so the export self-hosts them and the live site never
- * hotlinks the generation CDN.
- */
+/** 'local' always: the prebuild script guarantees these exist before next build. */
 const IMAGE_SOURCE = 'local' as ImageSource;
 
 export const src = (key: keyof typeof images) => images[key][IMAGE_SOURCE];

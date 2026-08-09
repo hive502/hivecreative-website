@@ -48,9 +48,9 @@ export default function SectionHeading({
 
       <h2
         className={[
-          'text-4xl font-bold leading-[1.05] tracking-tighter sm:text-5xl lg:text-6xl',
+          'text-4xl font-extrabold leading-[1.05] tracking-tighter sm:text-5xl lg:text-6xl',
           eyebrow ? 'mt-6' : '',
-          tone === 'light' ? 'text-white' : 'text-brand-navy',
+          tone === 'light' ? 'text-white' : 'text-[#2B3C5A]',
         ].join(' ')}
       >
         {title}
@@ -61,7 +61,7 @@ export default function SectionHeading({
           className={[
             'mt-8 text-lg leading-relaxed',
             centered ? 'mx-auto max-w-2xl' : 'max-w-2xl',
-            tone === 'light' ? 'text-white/70' : 'text-brand-navy/65',
+            tone === 'light' ? 'text-white/70' : 'text-slate-600',
           ].join(' ')}
         >
           {lede}

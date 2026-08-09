@@ -36,7 +36,7 @@
     "trust3": "Creado para que lo encuentren",
     "chipValue": "$499",
     "chipLabel": "sitios desde",
-    "imageAlt": "Un dueño de un pequeño negocio sonriendo tranquilo frente a su computadora portátil en un taller iluminado"
+    "imageAlt": "Una computadora portátil, una libreta y un café ordenados sobre un escritorio azul marino"
   },
   "agitator": {
     "eyebrow": "¿Le suena familiar?",
@@ -82,7 +82,8 @@
         "title": "Lo mantenemos",
         "body": "Una vez publicado, usted queda tranquilo. Elija el Plan de Cuidado mensual que se ajuste a su negocio, desde $69 al mes, y nosotros nos encargamos del alojamiento premium, las actualizaciones de seguridad y las copias de seguridad diarias."
       }
-    ]
+    ],
+    "imageAlt": "Manos escribiendo en un teclado junto a una libreta azul marino y un bolígrafo naranja"
   },
   "portfolio": {
     "eyebrow": "Trabajos recientes",
@@ -93,13 +94,22 @@
         "label": "Osorio Insurance & Business",
         "alt": "Página principal de Osorio Insurance and Business, con el titular \"We protect what matters most\" y botones de consulta y llamada"
       },
-      { "label": "Celular, inicio", "alt": "La página principal de Osorio Insurance and Business en un celular" },
+      {
+        "label": "Celular, inicio",
+        "alt": "La página principal de Osorio Insurance and Business en un celular"
+      },
       {
         "label": "Dos servicios, un sitio",
         "alt": "Dos tarjetas de servicio lado a lado, una de seguros y otra de impuestos y servicios empresariales"
       },
-      { "label": "Celular, servicios", "alt": "La tarjeta del servicio de seguros en un celular" },
-      { "label": "Celular, nosotros", "alt": "Una sección que presenta al fundador, en un celular" }
+      {
+        "label": "Celular, servicios",
+        "alt": "La tarjeta del servicio de seguros en un celular"
+      },
+      {
+        "label": "Celular, nosotros",
+        "alt": "Una sección que presenta al fundador, en un celular"
+      }
     ]
   },
   "caseStudy": {
@@ -109,9 +119,18 @@
     "paragraph1": "llegó con un reto poco común: dos empresas legalmente separadas, una de seguros y otra de impuestos y servicios empresariales, que debían convivir en un mismo sitio sin confundir a los clientes ni mezclar la línea legal entre ambas.",
     "paragraph2": "Creamos un sitio bilingüe que abre en inglés o español, separa los dos negocios en caminos claros lado a lado y muestra el texto de cumplimiento que cada uno necesita. El teléfono queda siempre a un toque de distancia, porque en su negocio la llamada es la conversión.",
     "stats": [
-      { "value": "EN / ES", "label": "Creado en ambos idiomas" },
-      { "value": "Dos", "label": "Negocios, un solo sitio claro" },
-      { "value": "Un toque", "label": "Para llamar desde cualquier página" }
+      {
+        "value": "EN / ES",
+        "label": "Creado en ambos idiomas"
+      },
+      {
+        "value": "Dos",
+        "label": "Negocios, un solo sitio claro"
+      },
+      {
+        "value": "Un toque",
+        "label": "Para llamar desde cualquier página"
+      }
     ],
     "cta": "Quiero un sitio así",
     "imageAlt": "El sitio de Osorio Insurance and Business en una computadora portátil y un celular"
@@ -213,7 +232,8 @@
           "Tiempos de respuesta más rápidos"
         ]
       }
-    ]
+    ],
+    "imageAlt": "Una oficina luminosa y tranquila con un sofá azul marino y un libro naranja"
   },
   "faq": {
     "eyebrow": "Buenas preguntas",
@@ -247,5 +267,12 @@
     "getInTouch": "Contáctenos",
     "rights": "Todos los derechos reservados.",
     "tagline": "Sitios web sin complicaciones técnicas."
+  },
+  "mobile": {
+    "eyebrow": "Pensado para el celular",
+    "title": "La mayoría de sus clientes lo encontrarán desde el celular.",
+    "lede": "Todos los sitios que creamos se diseñan primero para la pantalla pequeña y luego se adaptan a la grande. No al revés, que es como los sitios terminan siendo ilegibles justo donde más se usan.",
+    "imageAlt": "Un panel de aplicación móvil mostrado en un celular",
+    "cta": "Ver los paquetes"
   }
 }

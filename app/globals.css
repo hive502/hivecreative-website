@@ -20,13 +20,13 @@
 }
 
 @layer components {
-  /* Primary CTA — warm orange, this is the only button style that gets to pop. */
+  /* Primary CTA. Exact brand hex, the only button style that gets to pop. */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-tangerine px-7 py-4
-           text-base font-bold text-white shadow-cta transition-all duration-200
-           hover:-translate-y-0.5 hover:bg-brand-tangerine-dark hover:shadow-lg
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#FF8F00] px-7 py-4
+           text-base font-bold text-white shadow-cta transition-all duration-300
+           hover:-translate-y-0.5 hover:bg-orange-600 hover:shadow-lg
            focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
-           focus-visible:outline-brand-tangerine active:translate-y-0;
+           focus-visible:outline-[#FF8F00] active:translate-y-0;
   }
 
   /* Secondary CTA — quiet navy outline. */
@@ -44,11 +44,11 @@
   }
 
   .section-title {
-    @apply text-3xl font-bold leading-[1.15] tracking-tight text-brand-navy
-           sm:text-4xl lg:text-[2.75rem];
+    @apply text-4xl font-extrabold leading-[1.05] tracking-tighter text-[#2B3C5A]
+           sm:text-5xl lg:text-6xl;
   }
 
   .section-lede {
-    @apply mx-auto max-w-2xl text-lg leading-relaxed text-brand-navy/70;
+    @apply mx-auto max-w-2xl text-lg leading-relaxed text-slate-600;
   }
 }

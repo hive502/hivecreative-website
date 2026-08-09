@@ -22,13 +22,15 @@ const config: Config = {
           'tangerine-light': '#FFB454',
           'tangerine-tint': '#FFF3E0',   // icon chips, eyebrow pills
 
-          /* ---- Accent: brand blue --------------------------------------
-             Sampled from the logo artwork (#0F4993), not the original
-             #2B3C5A spec, so headings sit in the same family as the mark. */
-          navy: '#0F4993',
-          'navy-dark': '#0A3369',        // footer gradient end
-          'navy-light': '#3D74BE',
-          'navy-tint': '#E9EFF8',        // quiet section fills
+          /* ---- Accent: Soft Navy ---------------------------------------
+             #2B3C5A everywhere: headings, footer, structure. The logo artwork
+             was recoloured to match, so the mark and the headings beside it in
+             the navbar are the same blue. `text-brand-navy` compiles to exactly
+             text-[#2B3C5A]. */
+          navy: '#2B3C5A',
+          'navy-dark': '#1E2B42',        // footer gradient end
+          'navy-light': '#4A5E80',
+          'navy-tint': '#EEF1F6',        // quiet section fills
 
           /* ---- Neutrals ------------------------------------------------ */
           bg: '#F9F9F9',                 // off-white section background
@@ -40,13 +42,13 @@ const config: Config = {
         sans: ['var(--font-nunito)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        soft: '0 4px 20px -4px rgba(15, 73, 147, 0.10)',
-        lift: '0 18px 40px -12px rgba(15, 73, 147, 0.22)',
+        soft: '0 4px 20px -4px rgba(43, 60, 90, 0.10)',
+        lift: '0 18px 40px -12px rgba(43, 60, 90, 0.22)',
         cta: '0 10px 24px -8px rgba(255, 143, 0, 0.55)',
       },
       backgroundImage: {
         'paper-fade': 'linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%)',
-        'navy-fade': 'linear-gradient(160deg, #0F4993 0%, #0A3369 100%)',
+        'navy-fade': 'linear-gradient(160deg, #2B3C5A 0%, #1E2B42 100%)',
         'orange-fade': 'linear-gradient(135deg, #FF8F00 0%, #D97A00 100%)',
       },
       borderRadius: { '4xl': '2rem' },

@@ -36,7 +36,7 @@
     "trust3": "Built to get found",
     "chipValue": "$499",
     "chipLabel": "one-off builds from",
-    "imageAlt": "A relaxed small business owner smiling at his laptop in a sunlit workshop office"
+    "imageAlt": "A laptop, notebook and coffee arranged neatly on a navy desk"
   },
   "agitator": {
     "eyebrow": "Sound familiar?",
@@ -82,7 +82,8 @@
         "title": "We Maintain It",
         "body": "Once we launch, you have total peace of mind. Choose the monthly Care Plan that fits your business, starting at $69/mo, and we will handle your premium hosting, security updates, and daily backups so you never have to worry."
       }
-    ]
+    ],
+    "imageAlt": "Hands typing at a keyboard beside a navy notebook and an orange pen"
   },
   "portfolio": {
     "eyebrow": "Recent builds",
@@ -93,13 +94,22 @@
         "label": "Osorio Insurance & Business",
         "alt": "Homepage of Osorio Insurance and Business, headlined \"We protect what matters most\", with consultation and call buttons"
       },
-      { "label": "Mobile, Homepage", "alt": "The Osorio Insurance and Business homepage on a phone" },
+      {
+        "label": "Mobile, Homepage",
+        "alt": "The Osorio Insurance and Business homepage on a phone"
+      },
       {
         "label": "Dual-service layout",
         "alt": "Two side-by-side service cards, one for insurance and one for tax and business services"
       },
-      { "label": "Mobile, Services", "alt": "The insurance service card on a phone" },
-      { "label": "Mobile, About", "alt": "An about section introducing the founder, on a phone" }
+      {
+        "label": "Mobile, Services",
+        "alt": "The insurance service card on a phone"
+      },
+      {
+        "label": "Mobile, About",
+        "alt": "An about section introducing the founder, on a phone"
+      }
     ]
   },
   "caseStudy": {
@@ -109,9 +119,18 @@
     "paragraph1": "came to us with an awkward problem: two legally separate companies, one for insurance and one for tax and business services, that had to live under one roof without confusing customers or blurring the line between them.",
     "paragraph2": "We built a bilingual site that opens in English or Spanish, splits the two businesses into clear side-by-side paths, and carries the compliance wording each one needs. The phone number stays one tap away on every screen, because in their business the call is the conversion.",
     "stats": [
-      { "value": "EN / ES", "label": "Built in both languages" },
-      { "value": "Two", "label": "Businesses, one clear site" },
-      { "value": "One tap", "label": "To call from any page" }
+      {
+        "value": "EN / ES",
+        "label": "Built in both languages"
+      },
+      {
+        "value": "Two",
+        "label": "Businesses, one clear site"
+      },
+      {
+        "value": "One tap",
+        "label": "To call from any page"
+      }
     ],
     "cta": "I want a site like this",
     "imageAlt": "The Osorio Insurance and Business website shown on a laptop and a phone"
@@ -213,7 +232,8 @@
           "Faster response times"
         ]
       }
-    ]
+    ],
+    "imageAlt": "A bright, calm studio office with a navy sofa and an orange book"
   },
   "faq": {
     "eyebrow": "Good questions",
@@ -247,5 +267,12 @@
     "getInTouch": "Get in touch",
     "rights": "All rights reserved.",
     "tagline": "Websites without the tech headaches."
+  },
+  "mobile": {
+    "eyebrow": "Built for phones",
+    "title": "Most of your customers will find you on a phone.",
+    "lede": "Every site we build is designed for the small screen first, then scaled up. Not the other way round, which is how sites end up unreadable in the place they get used most.",
+    "imageAlt": "A mobile app dashboard shown on a phone",
+    "cta": "See the packages"
   }
 }

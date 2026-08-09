@@ -22,7 +22,7 @@ import PricingCard from '@/components/PricingCard';
 import CarePlanCard from '@/components/CarePlanCard';
 import FaqAccordion from '@/components/FaqAccordion';
 import PortfolioAnimation from '@/components/PortfolioAnimation';
-import { src, site, caseStudyImage } from '@/lib/assets';
+import { src, photos, site, caseStudyImage } from '@/lib/assets';
 import { BUILD_CHECKOUT_URLS, CARE_CHECKOUT_URLS } from '@/lib/stripe';
 import { locales, type Locale } from '@/i18n';
 
@@ -74,7 +74,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           aria-hidden
         />
 
-        <div className="container relative grid items-center gap-14 py-24 lg:grid-cols-[1.05fr_1fr] lg:gap-24 lg:py-40">
+        <div className="container relative grid items-center gap-16 py-24 md:py-32 lg:grid-cols-2 lg:gap-20 lg:py-40">
           <div className="animate-fade-up">
             <p className="eyebrow">
               <Sparkles className="h-3.5 w-3.5" aria-hidden />
@@ -123,16 +123,18 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             </ul>
           </div>
 
-          <div className="relative animate-fade-up [animation-delay:120ms]">
-            <div className="relative overflow-hidden rounded-4xl bg-white shadow-lift ring-1 ring-brand-navy/10">
+          {/* Portrait photo, half the split on desktop and stacked below the text on
+              mobile (order handled by the grid, since this comes second in the DOM). */}
+          <div className="relative mx-auto w-full max-w-md animate-fade-up [animation-delay:120ms] lg:max-w-lg">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-brand-navy/10">
               <Image
-                src={src('hero')}
+                src={photos.hero}
                 alt={t('hero.imageAlt')}
-                width={2688}
-                height={1536}
+                width={1152}
+                height={1728}
                 priority
-                sizes="(max-width: 1024px) 100vw, 46vw"
-                className="h-full w-full object-cover"
+                sizes="(max-width: 1024px) 90vw, 45vw"
+                className="h-full w-full rounded-3xl object-cover"
               />
             </div>
 
@@ -228,16 +230,15 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
           {/* "Modern Geometric Precision" artwork: three ascending tiles, echoing the
               three steps below without repeating them in words. */}
-          <div className="mx-auto mt-20 max-w-4xl overflow-hidden rounded-4xl">
+          <div className="mx-auto mt-16 aspect-[16/9] max-w-4xl overflow-hidden rounded-2xl shadow-xl">
             <Image
-              src={src('process')}
-              alt=""
-              aria-hidden
-              width={2688}
-              height={1536}
+              src={photos.process}
+              alt={t('process.imageAlt')}
+              width={1152}
+              height={1728}
               loading="lazy"
               sizes="(max-width: 1024px) 100vw, 56rem"
-              className="h-full w-full object-cover"
+              className="h-full w-full rounded-2xl object-cover object-center"
             />
           </div>
 
@@ -327,6 +328,38 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
+      {/* ─────────── 4b. MOBILE FIRST ───────────
+          Sits between the case study and pricing: the reader has just seen proof the
+          work is good, and this answers "will it work on my phone" before price. */}
+      <section className="border-t border-brand-navy/10 bg-brand-bg py-24 md:py-32 lg:py-40">
+        <div className="container grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+          <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl shadow-xl lg:max-w-md">
+            <Image
+              src={photos.mobile}
+              alt={t('mobile.imageAlt')}
+              width={1152}
+              height={1728}
+              loading="lazy"
+              sizes="(max-width: 1024px) 80vw, 40vw"
+              className="aspect-[3/4] h-full w-full rounded-2xl object-cover"
+            />
+          </div>
+
+          <div>
+            <SectionHeading
+              eyebrow={t('mobile.eyebrow')}
+              title={t('mobile.title')}
+              lede={t('mobile.lede')}
+              align="left"
+            />
+            <a href="#pricing" className="btn-primary mt-12">
+              {t('mobile.cta')}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ───────────────── 5. PRICING (BUILDS) ───────────────── */}
       <section id="pricing" className="border-y border-brand-navy/10 bg-paper-fade py-24 md:py-32 lg:py-40">
         <div className="container">
@@ -371,16 +404,15 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <section id="care" className="bg-white py-24 md:py-32 lg:py-40">
         <div className="container">
           <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
-            <div className="order-2 overflow-hidden rounded-4xl lg:order-1">
+            <div className="order-2 mx-auto w-full max-w-md overflow-hidden rounded-2xl shadow-xl lg:order-1 lg:max-w-none">
               <Image
-                src={src('care')}
-                alt=""
-                aria-hidden
-                width={2432}
-                height={1792}
+                src={photos.about}
+                alt={t('care.imageAlt')}
+                width={1152}
+                height={1728}
                 loading="lazy"
-                sizes="(max-width: 1024px) 100vw, 46vw"
-                className="h-full w-full object-cover"
+                sizes="(max-width: 1024px) 90vw, 46vw"
+                className="aspect-[4/5] h-full w-full rounded-2xl object-cover"
               />
             </div>
             <div className="order-1 lg:order-2">
