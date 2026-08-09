@@ -89,7 +89,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   className="absolute inset-x-0 bottom-1.5 z-0 h-3 rounded-full bg-brand-tangerine/25 sm:bottom-2 sm:h-4"
                   aria-hidden
                 />
-              </span>
+              </span>{' '}
               {t('hero.titleEnd')}
             </h1>
 
