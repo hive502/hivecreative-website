@@ -22,6 +22,7 @@ import PricingCard from '@/components/PricingCard';
 import CarePlanCard from '@/components/CarePlanCard';
 import FaqAccordion from '@/components/FaqAccordion';
 import PortfolioAnimation from '@/components/PortfolioAnimation';
+import HiveAnimation from '@/components/HiveAnimation';
 import { src, photos, site, caseStudyImage } from '@/lib/assets';
 import { BUILD_CHECKOUT_URLS, CARE_CHECKOUT_URLS } from '@/lib/stripe';
 import { locales, type Locale } from '@/i18n';
@@ -63,6 +64,11 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     <>
       {/* ───────────────────────── 1. HERO ───────────────────────── */}
       <section className="relative overflow-hidden bg-paper-fade">
+        {/* Background lattice. Sits at z-0, ABOVE the section's own background but
+            below the content, which is lifted to z-10. Using -z-10 here would push
+            it behind bg-paper-fade and it would never be visible. */}
+        <HiveAnimation />
+
         <div
           className="pointer-events-none absolute -right-32 -top-40 h-[34rem] w-[34rem] rounded-full
                      bg-brand-tangerine/[0.06] blur-3xl"
@@ -74,7 +80,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           aria-hidden
         />
 
-        <div className="container relative grid items-center gap-16 py-24 md:py-32 lg:grid-cols-2 lg:gap-20 lg:py-40">
+        <div className="container relative z-10 grid items-center gap-16 py-24 md:py-32 lg:grid-cols-2 lg:gap-20 lg:py-40">
           <div className="animate-fade-up">
             <p className="eyebrow">
               <Sparkles className="h-3.5 w-3.5" aria-hidden />
