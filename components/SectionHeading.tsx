@@ -6,7 +6,17 @@ type SectionHeadingProps = {
   tone?: 'navy' | 'light';
 };
 
-/** Shared section header so every band on the page shares the same rhythm. */
+/**
+ * Shared section header, and the main lever for typographic contrast across the site.
+ *
+ * Headings are large with tight tracking and a short line-height, so they read as one
+ * confident block. Body copy goes the other way: normal weight, relaxed leading,
+ * reduced contrast. The gap between those two settings is what makes a page feel
+ * designed rather than merely typed.
+ *
+ * The tangerine rule above the eyebrow is the only decoration. Under the 60-30-10 rule
+ * the accent colour appears at this size or on a button, never as a large fill.
+ */
 export default function SectionHeading({
   eyebrow,
   title,
@@ -19,31 +29,39 @@ export default function SectionHeading({
   return (
     <div className={centered ? 'mx-auto max-w-3xl text-center' : 'max-w-3xl'}>
       {eyebrow && (
-        <p
-          className={
-            tone === 'light'
-              ? 'inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-brand-tangerine-light'
-              : 'eyebrow'
-          }
-        >
-          {eyebrow}
-        </p>
+        <div className={centered ? 'flex flex-col items-center' : 'flex flex-col items-start'}>
+          <span
+            className={`block h-1 w-12 rounded-full ${
+              tone === 'light' ? 'bg-brand-tangerine-light' : 'bg-brand-tangerine'
+            }`}
+            aria-hidden
+          />
+          <p
+            className={`mt-6 text-xs font-bold uppercase tracking-[0.2em] ${
+              tone === 'light' ? 'text-brand-tangerine-light' : 'text-brand-tangerine'
+            }`}
+          >
+            {eyebrow}
+          </p>
+        </div>
       )}
+
       <h2
         className={[
-          'text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.75rem]',
-          eyebrow ? 'mt-5' : '',
+          'text-4xl font-bold leading-[1.05] tracking-tighter sm:text-5xl lg:text-6xl',
+          eyebrow ? 'mt-6' : '',
           tone === 'light' ? 'text-white' : 'text-brand-navy',
         ].join(' ')}
       >
         {title}
       </h2>
+
       {lede && (
         <p
           className={[
-            'mt-6 text-lg leading-relaxed',
+            'mt-8 text-lg leading-relaxed',
             centered ? 'mx-auto max-w-2xl' : 'max-w-2xl',
-            tone === 'light' ? 'text-white/70' : 'text-brand-navy/70',
+            tone === 'light' ? 'text-white/70' : 'text-brand-navy/65',
           ].join(' ')}
         >
           {lede}

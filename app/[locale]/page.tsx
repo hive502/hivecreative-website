@@ -65,7 +65,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <section className="relative overflow-hidden bg-paper-fade">
         <div
           className="pointer-events-none absolute -right-32 -top-40 h-[34rem] w-[34rem] rounded-full
-                     bg-brand-tangerine/10 blur-3xl"
+                     bg-brand-tangerine/[0.06] blur-3xl"
           aria-hidden
         />
         <div
@@ -74,14 +74,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           aria-hidden
         />
 
-        <div className="container relative grid items-center gap-14 py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-20 lg:py-32">
+        <div className="container relative grid items-center gap-14 py-24 lg:grid-cols-[1.05fr_1fr] lg:gap-24 lg:py-40">
           <div className="animate-fade-up">
             <p className="eyebrow">
               <Sparkles className="h-3.5 w-3.5" aria-hidden />
               {t('hero.eyebrow')}
             </p>
 
-            <h1 className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-brand-navy sm:text-5xl lg:text-[3.5rem]">
+            <h1 className="mt-8 text-5xl font-bold leading-[0.98] tracking-tighter text-brand-navy sm:text-6xl lg:text-7xl">
               {t('hero.titleStart')}{' '}
               <span className="relative inline-block">
                 <span className="relative z-10">{t('hero.titleHighlight')}</span>
@@ -93,7 +93,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               {t('hero.titleEnd')}
             </h1>
 
-            <p className="mt-7 max-w-xl text-lg leading-relaxed text-brand-navy/70">
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-brand-navy/65">
               {t('hero.sub')}
             </p>
 
@@ -157,7 +157,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* ───────────────────── 2. THE AGITATOR ───────────────────── */}
-      <section className="border-y border-brand-navy/10 bg-white py-20 sm:py-28">
+      <section className="border-y border-brand-navy/10 bg-white py-24 md:py-32 lg:py-40">
         <div className="container">
           <SectionHeading
             eyebrow={t('agitator.eyebrow')}
@@ -170,7 +170,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             lede={t('agitator.lede')}
           />
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-20 grid gap-8 md:grid-cols-3">
             {painPoints.map((pain, i) => {
               const Icon = painIcons[i];
               return (
@@ -189,7 +189,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <h3 className="mt-6 text-lg font-bold tracking-tight text-brand-navy">
                     {pain.title}
                   </h3>
-                  <p className="mt-3 text-[0.975rem] leading-relaxed text-brand-navy/70">
+                  <p className="mt-4 text-lg leading-relaxed text-brand-navy/65">
                     {pain.body}
                   </p>
                 </div>
@@ -197,7 +197,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             })}
           </div>
 
-          <div className="mx-auto mt-14 max-w-3xl rounded-2xl bg-navy-fade px-8 py-10 text-center shadow-lift sm:px-12">
+          <div className="mx-auto mt-20 max-w-3xl rounded-2xl bg-navy-fade px-8 py-10 text-center shadow-lift sm:px-12">
             <ArrowDown className="mx-auto h-6 w-6 text-brand-tangerine" aria-hidden />
             <p className="mt-5 text-xl font-bold leading-snug text-white sm:text-2xl">
               {t('agitator.turnTitle')}
@@ -210,9 +210,9 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* ───────────────── 3. THE 3-STEP PROCESS ───────────────── */}
-      <section id="process" className="relative overflow-hidden bg-brand-bg py-20 sm:py-32">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.35]" aria-hidden>
-          <Image src={src('honeycomb')} alt="" fill aria-hidden className="object-cover" />
+      <section id="process" className="relative overflow-hidden bg-brand-bg py-24 md:py-32 lg:py-40">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.22]" aria-hidden>
+          <Image src={src('texture')} alt="" fill aria-hidden className="object-cover" />
         </div>
         <div
           className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-bg via-brand-bg/60 to-brand-bg"
@@ -226,7 +226,22 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             lede={t('process.lede')}
           />
 
-          <div className="mt-16 grid gap-8 lg:grid-cols-3 lg:gap-6">
+          {/* "Modern Geometric Precision" artwork: three ascending tiles, echoing the
+              three steps below without repeating them in words. */}
+          <div className="mx-auto mt-20 max-w-4xl overflow-hidden rounded-4xl">
+            <Image
+              src={src('process')}
+              alt=""
+              aria-hidden
+              width={2688}
+              height={1536}
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 56rem"
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <div className="mt-20 grid gap-10 lg:grid-cols-3 lg:gap-8">
             {steps.map((step, i) => (
               <ProcessStep
                 key={step.step}
@@ -240,7 +255,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             ))}
           </div>
 
-          <div className="mt-14 text-center">
+          <div className="mt-20 text-center">
             <a href="#pricing" className="btn-primary">
               {t('process.cta')}
               <ArrowRight className="h-4 w-4" aria-hidden />
@@ -258,8 +273,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       />
 
       {/* ───────────────── 4. FEATURED CASE STUDY ───────────────── */}
-      <section id="work" className="bg-white py-20 sm:py-32">
-        <div className="container grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <section id="work" className="bg-white py-24 md:py-32 lg:py-40">
+        <div className="container grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           <div className="relative order-2 lg:order-1">
             <div
               className="pointer-events-none absolute -inset-6 -z-10 rounded-4xl bg-brand-navy-tint"
@@ -282,12 +297,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               align="left"
             />
 
-            <p className="mt-8 text-[1.05rem] leading-relaxed text-brand-navy/75">
+            <p className="mt-10 text-lg leading-relaxed text-brand-navy/65">
               <strong className="font-bold text-brand-navy">{t('caseStudy.client')}</strong>{' '}
               {t('caseStudy.paragraph1')}
             </p>
 
-            <p className="mt-5 text-[1.05rem] leading-relaxed text-brand-navy/75">
+            <p className="mt-6 text-lg leading-relaxed text-brand-navy/65">
               {t('caseStudy.paragraph2')}
             </p>
 
@@ -313,7 +328,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* ───────────────── 5. PRICING (BUILDS) ───────────────── */}
-      <section id="pricing" className="border-y border-brand-navy/10 bg-paper-fade py-20 sm:py-32">
+      <section id="pricing" className="border-y border-brand-navy/10 bg-paper-fade py-24 md:py-32 lg:py-40">
         <div className="container">
           <SectionHeading
             eyebrow={t('pricing.eyebrow')}
@@ -321,7 +336,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             lede={t('pricing.lede')}
           />
 
-          <div className="mt-16 grid items-stretch gap-8 lg:grid-cols-3 lg:gap-6">
+          <div className="mt-20 grid items-stretch gap-10 lg:grid-cols-3 lg:gap-8">
             {buildPlans.map((plan, i) => (
               <PricingCard
                 key={plan.name}
@@ -353,11 +368,32 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* ───────────────── 6. CARE PLANS ───────────────── */}
-      <section id="care" className="bg-white py-20 sm:py-32">
+      <section id="care" className="bg-white py-24 md:py-32 lg:py-40">
         <div className="container">
-          <SectionHeading eyebrow={t('care.eyebrow')} title={t('care.title')} lede={t('care.lede')} />
+          <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+            <div className="order-2 overflow-hidden rounded-4xl lg:order-1">
+              <Image
+                src={src('care')}
+                alt=""
+                aria-hidden
+                width={2432}
+                height={1792}
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 46vw"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <SectionHeading
+                eyebrow={t('care.eyebrow')}
+                title={t('care.title')}
+                lede={t('care.lede')}
+                align="left"
+              />
+            </div>
+          </div>
 
-          <div className="mt-16 grid items-stretch gap-8 lg:grid-cols-3 lg:gap-6">
+          <div className="mt-24 grid items-stretch gap-10 lg:grid-cols-3 lg:gap-8">
             {carePlans.map((plan, i) => (
               <CarePlanCard
                 key={plan.name}
@@ -384,11 +420,11 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* ───────────────── 7. FAQ ───────────────── */}
-      <section id="faq" className="border-t border-brand-navy/10 bg-brand-bg py-20 sm:py-32">
+      <section id="faq" className="border-t border-brand-navy/10 bg-brand-bg py-24 md:py-32 lg:py-40">
         <div className="container">
           <SectionHeading eyebrow={t('faq.eyebrow')} title={t('faq.title')} lede={t('faq.lede')} />
 
-          <div className="mx-auto mt-14 max-w-3xl">
+          <div className="mx-auto mt-20 max-w-3xl">
             <FaqAccordion items={faqs} defaultOpen={0} />
 
             <p className="mt-10 text-center text-[0.975rem] font-medium text-brand-navy/60">

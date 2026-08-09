@@ -60,7 +60,7 @@ export default function PricingCard({
         'group relative flex h-full flex-col rounded-2xl bg-white p-8 transition-all duration-300',
         featured
           ? 'shadow-lift ring-2 ring-brand-tangerine lg:-mt-4 lg:mb-4 lg:p-10'
-          : 'border border-brand-navy/10 shadow-soft hover:-translate-y-1 hover:shadow-lift',
+          : 'border border-brand-navy/10 shadow-soft hover:-translate-y-2 hover:border-brand-navy/20 hover:shadow-xl',
       ].join(' ')}
     >
       {featured && badge && (

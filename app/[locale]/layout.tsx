@@ -7,7 +7,7 @@ import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-in
 import '../globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { site } from '@/lib/assets';
+import { site, src } from '@/lib/assets';
 import { locales, isLocale, type Locale } from '@/i18n';
 
 /**
@@ -56,6 +56,11 @@ export async function generateMetadata({
       siteName: site.name,
       locale: locale === 'es' ? 'es_ES' : 'en_US',
       type: 'website',
+      images: [{ url: src('social'), width: 2688, height: 1536, alt: site.name }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [src('social')],
     },
     icons: { icon: '/brand/logo-icon.png', apple: '/brand/logo-icon.png' },
   };

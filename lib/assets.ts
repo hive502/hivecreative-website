@@ -3,60 +3,27 @@
  *
  * BRAND MARKS
  * -----------
- * The real artwork now ships with the repo at /public/brand:
- *   - logo-full.png  826×256  — icon + "hive creative" lockup, transparent background
- *   - logo-icon.png  512×515  — circular honeycomb mark, transparent background
+ * The logo is drawn as inline SVG by components/Logo.tsx, so no image request is made
+ * for it anywhere on the page. The PNGs below survive only as the favicon and
+ * apple-touch icon, which have to be real files.
  *
- * Both were processed from the originals: the paper/white backdrop was keyed out to
- * alpha while the white hexagons inside the circle were kept opaque, then trimmed and
- * downscaled. That transparency is what lets the icon sit on the navy footer.
+ * PHOTOGRAPHY AND ARTWORK
+ * -----------------------
+ * Generated via Higgsfield (Recraft V4.1). The abstract pieces share one prompt suffix,
+ * "Modern Geometric Precision", so they read as a set rather than four unrelated
+ * pictures: matte 3D geometry, studio lighting, and nothing outside navy, tangerine and
+ * off-white.
  *
- * The `drive` source below is kept as an escape hatch only. Note that Drive's
- * /file/d/<id>/view URL is a *viewer page*, not an image — it cannot be used as an
- * <img> or next/image `src`. The /thumbnail?id=<id>&sz=w<width> endpoint returns the
- * raw bitmap. Using it requires "Anyone with the link" sharing, serves the untrimmed
- * artwork *with* its opaque background (so it will show a white box on the navy
- * footer), and is rate-limited by Google. Prefer the local files.
+ * The hero deliberately stays a PHOTOGRAPH of a real person. It is the only human
+ * moment on the page, and a small business owner needs to picture themselves in it.
  *
- * PHOTOGRAPHY / TEXTURE
- * ---------------------
- * Generated via Higgsfield (Recraft V4.1). They currently point at the generation CDN
- * so the site renders immediately. Run `bash scripts/fetch-assets.sh` to pull them into
- * /public/images, then flip IMAGE_SOURCE to 'local' before going live.
+ * scripts/fetch-assets.sh runs as `prebuild` and guarantees every file below exists in
+ * public/images before next build, so the static export always self-hosts them.
  */
-
-const driveDirect = (id: string, width = 1200) =>
-  `https://drive.google.com/thumbnail?id=${id}&sz=w${width}`;
-
-/**
- * NOTE: the two Drive files are named the wrong way round at the source —
- * "Gemini_Generated_Image_7i84…" (id 1q0ds…) is the ICON, and
- * "Gemini_Generated_Image_iangl…" (id 1HqXz…) is the FULL lockup.
- * The mapping below is corrected; don't "fix" it back to match the filenames.
- */
-export const DRIVE_IDS = {
-  logoFull: '1HqXzwYpgZ_3reQoS_jYZGBXUsfqH0RMM',
-  logoIcon: '1q0dsN9QZeKqG4VeKAOTao-UkodPxfoje',
-} as const;
-
-type LogoSource = 'local' | 'drive';
-
-/** 'local' serves the trimmed, transparent PNGs. Only use 'drive' as a fallback. */
-const LOGO_SOURCE = 'local' as LogoSource;
 
 export const logo = {
-  full: {
-    src: LOGO_SOURCE === 'drive' ? driveDirect(DRIVE_IDS.logoFull, 1200) : '/brand/logo-full.png',
-    width: 826,
-    height: 256,
-  },
-  icon: {
-    src: LOGO_SOURCE === 'drive' ? driveDirect(DRIVE_IDS.logoIcon, 512) : '/brand/logo-icon.png',
-    width: 256,
-    height: 256,
-  },
-  /** Drive can't be run through the Next image optimizer reliably. */
-  unoptimized: LOGO_SOURCE === 'drive',
+  /** Favicon and apple-touch icon only. The on-page mark is components/Logo.tsx. */
+  icon: '/brand/logo-icon.png',
 } as const;
 
 export const images = {
@@ -65,39 +32,50 @@ export const images = {
       'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260804_215550_b1a59439-efc7-48b8-8e41-39bbeb160aec.png',
     local: '/images/hero-business-owner.png',
   },
-  honeycomb: {
+  /** Three ascending hexagonal tiles. Sits beside the 3-step process. */
+  process: {
     remote:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260804_215549_c4e2149d-6cb9-4e2b-ac25-fde8be448d72.svg',
-    local: '/images/honeycomb-texture.svg',
+      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260809_004022_906828b1-e25b-489a-b6ce-3652358263c3.png',
+    local: '/images/geo-process.png',
+  },
+  /** A navy prism sheltered inside a honeycomb frame. Sits beside the care plans. */
+  care: {
+    remote:
+      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260809_004022_af93a9c0-2ee0-445a-9fd4-5eb04d881d20.png',
+    local: '/images/geo-care.png',
+  },
+  /** Near-invisible embossed honeycomb, used at low opacity behind sections. */
+  texture: {
+    remote:
+      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260809_004022_811ba3d7-4291-4e91-ab32-df6979e05ee9.png',
+    local: '/images/geo-texture.png',
+  },
+  /** Social share card. Never rendered on the page itself. */
+  social: {
+    remote:
+      'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260809_004022_3527910b-1c76-4df9-9f86-7de47666b05d.png',
+    local: '/images/geo-social.png',
   },
 } as const;
 
 type ImageSource = 'local' | 'remote';
 
 /**
- * 'local' is correct for every build: the `prebuild` npm script runs
- * scripts/fetch-assets.sh, which guarantees these files exist in public/images
- * before next build runs. The static export therefore self-hosts them and the
- * live site never hotlinks the generation CDN.
+ * 'local' is correct for every build: the `prebuild` script guarantees these files
+ * exist before next build runs, so the export self-hosts them and the live site never
+ * hotlinks the generation CDN.
  */
 const IMAGE_SOURCE = 'local' as ImageSource;
 
 export const src = (key: keyof typeof images) => images[key][IMAGE_SOURCE];
 
-/* ------------------------------------------------------------------ */
-/* Portfolio marquee                                                    */
-/* ------------------------------------------------------------------ */
-
 /**
- * Featured case study visual — a composite of the real Osorio desktop and mobile
+ * Featured case study visual: a composite of the real Osorio desktop and mobile
  * screenshots in device frames, with its own shadows baked in and a transparent
- * background, so it drops onto any section colour.
- *
- * Rebuild it from the source screenshots rather than editing the composite.
+ * background. Rebuild it from the source screenshots rather than editing the composite.
  */
 export const caseStudyImage = {
   src: '/images/portfolio/osorio-case-study.webp',
-  alt: 'The Osorio Insurance & Business website shown on a laptop and a phone',
 } as const;
 
 export type PortfolioShot = {
@@ -108,18 +86,11 @@ export type PortfolioShot = {
 };
 
 /**
- * Screenshots of real client work, shown in the <PortfolioAnimation /> marquee.
+ * Real client screenshots for the marquee. Captions and alt text are localised, so they
+ * live in messages/*.json and are matched to this array BY INDEX. Reorder one and you
+ * must reorder the other.
  *
- * The section renders NOTHING while this array is empty, so it is safe to deploy
- * before the images exist. To switch it on: drop the files into
- * public/images/portfolio/ and uncomment the entries below.
- *
- * Use genuine screenshots only. This section sits directly above a case study
- * claiming a measured result, so invented mockups would misrepresent the work.
- *
- * Suggested capture settings for consistency:
- *   desktop — 1440×900 viewport, 2× device scale
- *   mobile  —  390×844 viewport, 3× device scale
+ * These are genuine client work, not decoration. Do not swap them for generated art.
  */
 export const portfolioShots: PortfolioShot[] = [
   { src: '/images/portfolio/osorio-desktop-hero.webp', device: 'desktop' },
