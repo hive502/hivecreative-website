@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "Hive Creative, sitios web para pequeños negocios sin complicaciones técnicas",
+    "description": "Sitios web hechos por nosotros para pequeños negocios y trabajadores independientes. Precio inicial transparente desde $499, más un Plan de Cuidado mensual para que nunca tenga que preocuparse por el mantenimiento, el alojamiento ni las actualizaciones.",
+    "ogTitle": "Un sitio web profesional que le trae clientes, sin complicaciones técnicas",
+    "ogDescription": "Paquetes de sitios web desde $499, con un Plan de Cuidado mensual aparte que mantiene su sitio seguro y actualizado."
+  },
+  "nav": {
+    "home": "Inicio",
+    "pricing": "Precios",
+    "work": "Nuestro trabajo",
+    "contact": "Contacto",
+    "cta": "Ver nuestros paquetes",
+    "homeAria": "Inicio de Hive Creative",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "footerNav": "Pie de página"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "es": "Español",
+    "switchTo": "Cambiar a inglés"
+  },
+  "hero": {
+    "eyebrow": "Sitios web para pequeños negocios",
+    "titleStart": "Un sitio web profesional que",
+    "titleHighlight": "le trae clientes",
+    "titleEnd": ", sin complicaciones técnicas.",
+    "sub": "Usted se concentra en su negocio. Nosotros creamos un sitio web atractivo que ayuda a que lo encuentren, y nos encargamos de todo el mantenimiento para que nunca tenga que preocuparse de que algo falle.",
+    "ctaPrimary": "Ver nuestros paquetes",
+    "ctaSecondary": "Cómo funciona",
+    "subtext": "Precios simples y transparentes para pequeños negocios.",
+    "trust1": "Publicado en 2 o 3 semanas",
+    "trust2": "Plan de Cuidado desde $69/mes",
+    "trust3": "Creado para que lo encuentren",
+    "chipValue": "$499",
+    "chipLabel": "sitios desde",
+    "imageAlt": "Un dueño de un pequeño negocio sonriendo tranquilo frente a su computadora portátil en un taller iluminado"
+  },
+  "agitator": {
+    "eyebrow": "¿Le suena familiar?",
+    "titleStart": "Seamos honestos: crear un sitio web no debería sentirse como",
+    "titleHighlight": "un segundo trabajo de tiempo completo.",
+    "lede": "La mayoría de los dueños de pequeños negocios con los que hablamos enfrentan uno de estos tres problemas:",
+    "points": [
+      {
+        "title": "El desastre de hacerlo solo",
+        "body": "Intentó crearlo usted mismo, pero no termina de verse bien."
+      },
+      {
+        "title": "El que desaparece",
+        "body": "Contrató a alguien barato y ahora no responde sus correos."
+      },
+      {
+        "title": "El pueblo fantasma digital",
+        "body": "Tiene un sitio web, pero no le trae clientes."
+      }
+    ],
+    "turnTitle": "No tiene por qué ser así.",
+    "turnBody": "Le damos un servicio completo y un socio a largo plazo con el que realmente puede comunicarse."
+  },
+  "process": {
+    "eyebrow": "El proceso Hive",
+    "title": "Cómo funciona: estar en línea es fácil.",
+    "lede": "Tres pasos, sin tecnicismos y sin tareas para usted más allá de su logo y algunos detalles.",
+    "cta": "Comenzar con el paso 1",
+    "stepLabel": "Paso",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Elija su paquete",
+        "body": "Escoja uno de nuestros paquetes con precio claro desde $499. Sin costos ocultos y sin sorpresas."
+      },
+      {
+        "step": "02",
+        "title": "Lo creamos",
+        "body": "Envíenos su logo y algunos detalles. Diseñamos un sitio moderno y adaptado a celulares, hecho a la medida de su marca."
+      },
+      {
+        "step": "03",
+        "title": "Lo mantenemos",
+        "body": "Una vez publicado, usted queda tranquilo. Elija el Plan de Cuidado mensual que se ajuste a su negocio, desde $69 al mes, y nosotros nos encargamos del alojamiento premium, las actualizaciones de seguridad y las copias de seguridad diarias."
+      }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Trabajos recientes",
+    "title": "Sitios reales, creados para negocios reales.",
+    "lede": "Todos empezaron igual que empezaría el suyo: un logo, algunos detalles y una conversación.",
+    "shots": [
+      {
+        "label": "Osorio Insurance & Business",
+        "alt": "Página principal de Osorio Insurance and Business, con el titular \"We protect what matters most\" y botones de consulta y llamada"
+      },
+      { "label": "Celular, inicio", "alt": "La página principal de Osorio Insurance and Business en un celular" },
+      {
+        "label": "Dos servicios, un sitio",
+        "alt": "Dos tarjetas de servicio lado a lado, una de seguros y otra de impuestos y servicios empresariales"
+      },
+      { "label": "Celular, servicios", "alt": "La tarjeta del servicio de seguros en un celular" },
+      { "label": "Celular, nosotros", "alt": "Una sección que presenta al fundador, en un celular" }
+    ]
+  },
+  "caseStudy": {
+    "eyebrow": "Trabajo destacado",
+    "title": "Vea lo que puede lograr un buen sitio web.",
+    "client": "Osorio Insurance & Business",
+    "paragraph1": "llegó con un reto poco común: dos empresas legalmente separadas, una de seguros y otra de impuestos y servicios empresariales, que debían convivir en un mismo sitio sin confundir a los clientes ni mezclar la línea legal entre ambas.",
+    "paragraph2": "Creamos un sitio bilingüe que abre en inglés o español, separa los dos negocios en caminos claros lado a lado y muestra el texto de cumplimiento que cada uno necesita. El teléfono queda siempre a un toque de distancia, porque en su negocio la llamada es la conversión.",
+    "stats": [
+      { "value": "EN / ES", "label": "Creado en ambos idiomas" },
+      { "value": "Dos", "label": "Negocios, un solo sitio claro" },
+      { "value": "Un toque", "label": "Para llamar desde cualquier página" }
+    ],
+    "cta": "Quiero un sitio así",
+    "imageAlt": "El sitio de Osorio Insurance and Business en una computadora portátil y un celular"
+  },
+  "pricing": {
+    "eyebrow": "Creación de sitios web",
+    "title": "Precios transparentes para pequeños negocios.",
+    "lede": "Un solo precio inicial para su sitio. Sin cobro por hora, sin cambios de alcance y sin facturas sorpresa.",
+    "priceSuffix": "pago único",
+    "cardFootnote": "Plan de Cuidado aparte, desde $69/mes",
+    "integrityNote": "Los planes de cuidado y mantenimiento continuo son un servicio independiente y obligatorio para mantener su sitio seguro, y no están incluidos en el precio único de la creación del sitio web.",
+    "seeCarePlans": "Ver los planes de cuidado",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "$499",
+        "tagline": "Una presencia clara y confiable para un negocio nuevo.",
+        "features": [
+          "Hasta 4 páginas",
+          "Diseño adaptado a celulares",
+          "Formulario de contacto básico",
+          "Configuración SEO básica"
+        ],
+        "cta": "Empezar con Starter"
+      },
+      {
+        "name": "Standard",
+        "price": "$899",
+        "tagline": "Espacio para contar su historia y recibir más solicitudes.",
+        "features": [
+          "Hasta 7 páginas",
+          "Diseño adaptado a celulares",
+          "Captación de clientes avanzada",
+          "Integraciones básicas"
+        ],
+        "cta": "Elegir Standard"
+      },
+      {
+        "name": "Growth",
+        "price": "$1399",
+        "tagline": "Para negocios establecidos listos para crecer.",
+        "features": [
+          "Hasta 12 páginas",
+          "Diseño adaptado a celulares",
+          "Gestor de contenido",
+          "SEO avanzado"
+        ],
+        "cta": "Elegir Growth"
+      }
+    ],
+    "mostPopular": "El más elegido"
+  },
+  "care": {
+    "eyebrow": "Cuidado continuo",
+    "title": "Tranquilidad continua: su Plan de Cuidado mensual.",
+    "lede": "Un sitio web es como un carro: necesita mantenimiento regular para funcionar bien. Por eso, todo sitio que creamos requiere un Plan de Cuidado, facturado cada mes desde $69 además del precio de creación. Usted elige el nivel que le convenga.",
+    "note": "El pago anual ahorra 15%. Los planes de cuidado tienen una duración inicial de 12 meses desde la publicación.",
+    "perMonth": "/mes",
+    "orYearly": "o",
+    "choose": "Elegir",
+    "recommended": "Recomendado",
+    "plans": [
+      {
+        "name": "Essential Care",
+        "monthly": "$69",
+        "yearly": "$704/año",
+        "saving": "Ahorre 15%",
+        "tagline": "Todo lo que su sitio necesita para estar seguro y en línea.",
+        "features": [
+          "Alojamiento premium y SSL",
+          "Copias de seguridad diarias",
+          "Monitoreo de seguridad",
+          "Hasta 30 minutos de cambios de texto o fotos",
+          "Soporte por correo"
+        ]
+      },
+      {
+        "name": "Full Care",
+        "monthly": "$129",
+        "yearly": "$1,316/año",
+        "saving": "Ahorre 15%",
+        "tagline": "Nuestro plan más elegido, con más apoyo y respuestas más rápidas.",
+        "features": [
+          "Todo lo de Essential Care",
+          "Soporte prioritario",
+          "Hasta 1 hora de cambios al mes",
+          "Revisión mensual del sitio"
+        ]
+      },
+      {
+        "name": "Premium Care",
+        "monthly": "$179",
+        "yearly": "$1,826/año",
+        "saving": "Ahorre 15%",
+        "tagline": "Para negocios que actualizan su sitio con frecuencia.",
+        "features": [
+          "Todo lo de Full Care",
+          "Hasta 2 horas de cambios al mes",
+          "Tiempos de respuesta más rápidos"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Buenas preguntas",
+    "title": "Lo que todos nos preguntan.",
+    "lede": "Respuestas claras, sin letra pequeña.",
+    "stillWondering": "¿Le quedó alguna duda?",
+    "emailUs": "Escríbanos a",
+    "items": [
+      {
+        "q": "¿El sitio web y el dominio son míos?",
+        "a": "Totalmente. Usted es dueño de su dominio y del contenido de su sitio. Si en algún momento decide seguir por su cuenta, después de los 12 meses iniciales del plan de cuidado, puede llevarse todo."
+      },
+      {
+        "q": "¿El dominio y el alojamiento están incluidos?",
+        "a": "El alojamiento premium está incluido en todos nuestros Planes de Cuidado. El dominio lo compra y lo registra usted directamente con un proveedor como GoDaddy. Nosotros nos encargamos de todo el trabajo técnico para conectarlo con su nuevo sitio."
+      },
+      {
+        "q": "¿Por qué necesito un plan de cuidado mensual?",
+        "a": "Un sitio web no se crea y se olvida. Las cosas fallan, el software queda desactualizado y siempre hay quien busca vulnerabilidades. Nuestros planes aseguran que su sitio esté alojado, protegido, respaldado y actualizado cada mes."
+      }
+    ]
+  },
+  "footer": {
+    "ctaTitle": "¿Listo para un sitio web que de verdad trabaje para su negocio?",
+    "ctaBody": "Sin estrés técnico. Sin gente que desaparece. Solo un sitio profesional que le trae clientes.",
+    "ctaPrimary": "Comenzar hoy",
+    "ctaSecondary": "Ver nuestros paquetes",
+    "subtext": "Precios simples y transparentes para pequeños negocios.",
+    "blurb": "Sitios web hechos por nosotros para pequeños negocios y trabajadores independientes, bien construidos y cuidados todos los meses.",
+    "explore": "Explorar",
+    "getInTouch": "Contáctenos",
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Sitios web sin complicaciones técnicas."
+  }
+}

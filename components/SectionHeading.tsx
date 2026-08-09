@@ -22,7 +22,7 @@ export default function SectionHeading({
         <p
           className={
             tone === 'light'
-              ? 'inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.14em] text-brand-orange-light'
+              ? 'inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-brand-tangerine-light'
               : 'eyebrow'
           }
         >
@@ -31,7 +31,7 @@ export default function SectionHeading({
       )}
       <h2
         className={[
-          'text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.75rem]',
+          'text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.75rem]',
           eyebrow ? 'mt-5' : '',
           tone === 'light' ? 'text-white' : 'text-brand-navy',
         ].join(' ')}

@@ -2,6 +2,8 @@ import type { LucideIcon } from 'lucide-react';
 
 type ProcessStepProps = {
   step: string;
+  /** Localised word for "Step". */
+  stepLabel: string;
   title: string;
   body: string;
   Icon: LucideIcon;
@@ -14,7 +16,14 @@ type ProcessStepProps = {
  * icon toward the next card, so the three steps read as a single sequence rather than
  * three unrelated boxes.
  */
-export default function ProcessStep({ step, title, body, Icon, isLast = false }: ProcessStepProps) {
+export default function ProcessStep({
+  step,
+  stepLabel,
+  title,
+  body,
+  Icon,
+  isLast = false,
+}: ProcessStepProps) {
   return (
     <div className="relative">
       {!isLast && (
@@ -28,7 +37,7 @@ export default function ProcessStep({ step, title, body, Icon, isLast = false }:
       <div
         className="group relative h-full rounded-2xl border border-brand-navy/10 bg-white/80 p-8
                    text-center shadow-soft backdrop-blur-sm transition-all duration-300
-                   hover:-translate-y-1.5 hover:border-brand-orange/30 hover:shadow-lift"
+                   hover:-translate-y-1.5 hover:border-brand-tangerine/30 hover:shadow-lift"
       >
         <div className="relative mx-auto flex h-20 w-20 items-center justify-center">
           <span
@@ -39,10 +48,10 @@ export default function ProcessStep({ step, title, body, Icon, isLast = false }:
           <Icon className="relative h-9 w-9 text-white" strokeWidth={2} aria-hidden />
         </div>
 
-        <p className="mt-6 text-xs font-extrabold uppercase tracking-[0.18em] text-brand-orange">
-          Step {step}
+        <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-brand-tangerine">
+          {stepLabel} {step}
         </p>
-        <h3 className="mt-2 text-xl font-extrabold tracking-tight text-brand-navy">{title}</h3>
+        <h3 className="mt-2 text-xl font-bold tracking-tight text-brand-navy">{title}</h3>
         <p className="mt-4 text-[0.975rem] leading-relaxed text-brand-navy/70">{body}</p>
       </div>
     </div>

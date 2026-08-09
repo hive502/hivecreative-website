@@ -15,18 +15,18 @@
   }
 
   ::selection {
-    @apply bg-brand-orange/20 text-brand-navy;
+    @apply bg-brand-tangerine/20 text-brand-navy;
   }
 }
 
 @layer components {
   /* Primary CTA — warm orange, this is the only button style that gets to pop. */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-orange px-7 py-4
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-tangerine px-7 py-4
            text-base font-bold text-white shadow-cta transition-all duration-200
-           hover:-translate-y-0.5 hover:bg-brand-orange-dark hover:shadow-lg
+           hover:-translate-y-0.5 hover:bg-brand-tangerine-dark hover:shadow-lg
            focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
-           focus-visible:outline-brand-orange active:translate-y-0;
+           focus-visible:outline-brand-tangerine active:translate-y-0;
   }
 
   /* Secondary CTA — quiet navy outline. */
@@ -39,12 +39,12 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full bg-brand-orange-tint px-4 py-1.5
-           text-xs font-extrabold uppercase tracking-[0.14em] text-brand-orange-dark;
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-tangerine-tint px-4 py-1.5
+           text-xs font-bold uppercase tracking-[0.14em] text-brand-tangerine-dark;
   }
 
   .section-title {
-    @apply text-3xl font-extrabold leading-[1.15] tracking-tight text-brand-navy
+    @apply text-3xl font-bold leading-[1.15] tracking-tight text-brand-navy
            sm:text-4xl lg:text-[2.75rem];
   }
 

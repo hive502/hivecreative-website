@@ -15,35 +15,41 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          orange: '#E88310',
-          'orange-dark': '#C96D06',
-          'orange-light': '#FBB35C',
-          'orange-tint': '#FEF4E8',
-          navy: '#2B3C5A',
-          'navy-dark': '#1E2B42',
-          'navy-light': '#4A5E80',
-          'navy-tint': '#EEF1F6',
-          paper: '#F9F9F9',
+          /* ---- Primary: Vibrant Tangerine ------------------------------
+             Every call to action. The only colour allowed to shout.       */
+          tangerine: '#FF8F00',
+          'tangerine-dark': '#D97A00',   // hover / gradient end
+          'tangerine-light': '#FFB454',
+          'tangerine-tint': '#FFF3E0',   // icon chips, eyebrow pills
+
+          /* ---- Accent: brand blue --------------------------------------
+             Sampled from the logo artwork (#0F4993), not the original
+             #2B3C5A spec, so headings sit in the same family as the mark. */
+          navy: '#0F4993',
+          'navy-dark': '#0A3369',        // footer gradient end
+          'navy-light': '#3D74BE',
+          'navy-tint': '#E9EFF8',        // quiet section fills
+
+          /* ---- Neutrals ------------------------------------------------ */
+          bg: '#F9F9F9',                 // off-white section background
           white: '#FFFFFF',
         },
       },
       fontFamily: {
-        // Wired to the CSS variable exposed by next/font/google in app/layout.tsx
+        // Wired to the CSS variable exposed by next/font/google in app/[locale]/layout.tsx
         sans: ['var(--font-nunito)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        soft: '0 4px 20px -4px rgba(43, 60, 90, 0.10)',
-        lift: '0 18px 40px -12px rgba(43, 60, 90, 0.22)',
-        cta: '0 10px 24px -8px rgba(232, 131, 16, 0.55)',
+        soft: '0 4px 20px -4px rgba(15, 73, 147, 0.10)',
+        lift: '0 18px 40px -12px rgba(15, 73, 147, 0.22)',
+        cta: '0 10px 24px -8px rgba(255, 143, 0, 0.55)',
       },
       backgroundImage: {
         'paper-fade': 'linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%)',
-        'navy-fade': 'linear-gradient(160deg, #2B3C5A 0%, #1E2B42 100%)',
-        'orange-fade': 'linear-gradient(135deg, #E88310 0%, #C96D06 100%)',
+        'navy-fade': 'linear-gradient(160deg, #0F4993 0%, #0A3369 100%)',
+        'orange-fade': 'linear-gradient(135deg, #FF8F00 0%, #D97A00 100%)',
       },
-      borderRadius: {
-        '4xl': '2rem',
-      },
+      borderRadius: { '4xl': '2rem' },
       keyframes: {
         'fade-up': {
           '0%': { opacity: '0', transform: 'translateY(12px)' },
@@ -53,9 +59,8 @@ const config: Config = {
           '0%': { maxHeight: '0', opacity: '0' },
           '100%': { maxHeight: '320px', opacity: '1' },
         },
-        /* The track holds two identical copies of the slide set side by side.
-           Shifting it left by exactly 50% lands copy 2 where copy 1 started, so the
-           loop restarts with no visible jump. */
+        /* Track holds two identical copies of the slide set; shifting it left by
+           exactly 50% lands copy 2 where copy 1 started, so the loop has no seam. */
         marquee: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },

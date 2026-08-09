@@ -64,13 +64,11 @@ export const images = {
     remote:
       'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260804_215550_b1a59439-efc7-48b8-8e41-39bbeb160aec.png',
     local: '/images/hero-business-owner.png',
-    alt: 'A relaxed small business owner smiling at his laptop in a sunlit workshop office',
   },
   honeycomb: {
     remote:
       'https://d8j0ntlcm91z4.cloudfront.net/user_3HEB9Aj6pYwybMvL0c7StZffjFh/hf_20260804_215549_c4e2149d-6cb9-4e2b-ac25-fde8be448d72.svg',
     local: '/images/honeycomb-texture.svg',
-    alt: '',
   },
 } as const;
 
@@ -105,10 +103,6 @@ export const caseStudyImage = {
 export type PortfolioShot = {
   /** Path under /public/images/portfolio/ */
   src: string;
-  /** Describe what the screenshot shows — this is real alt text, not decoration. */
-  alt: string;
-  /** Caption rendered under the frame. */
-  label: string;
   /** Controls the device frame and card width. */
   device: 'desktop' | 'mobile';
 };
@@ -128,36 +122,11 @@ export type PortfolioShot = {
  *   mobile  —  390×844 viewport, 3× device scale
  */
 export const portfolioShots: PortfolioShot[] = [
-  {
-    src: '/images/portfolio/osorio-desktop-hero.webp',
-    alt: 'Homepage of Osorio Insurance & Business, headlined "We protect what matters most", with consultation and call buttons',
-    label: 'Osorio Insurance & Business',
-    device: 'desktop',
-  },
-  {
-    src: '/images/portfolio/osorio-mobile-hero.webp',
-    alt: 'The Osorio Insurance & Business homepage on a phone',
-    label: 'Mobile — Homepage',
-    device: 'mobile',
-  },
-  {
-    src: '/images/portfolio/osorio-desktop-services.webp',
-    alt: 'Two side-by-side service cards, one for insurance and one for tax and business services',
-    label: 'Dual-service layout',
-    device: 'desktop',
-  },
-  {
-    src: '/images/portfolio/osorio-mobile-services.webp',
-    alt: 'The insurance service card on a phone',
-    label: 'Mobile — Services',
-    device: 'mobile',
-  },
-  {
-    src: '/images/portfolio/osorio-mobile-advisor.webp',
-    alt: 'An about section introducing the founder, on a phone',
-    label: 'Mobile — About',
-    device: 'mobile',
-  },
+  { src: '/images/portfolio/osorio-desktop-hero.webp', device: 'desktop' },
+  { src: '/images/portfolio/osorio-mobile-hero.webp', device: 'mobile' },
+  { src: '/images/portfolio/osorio-desktop-services.webp', device: 'desktop' },
+  { src: '/images/portfolio/osorio-mobile-services.webp', device: 'mobile' },
+  { src: '/images/portfolio/osorio-mobile-advisor.webp', device: 'mobile' },
 ];
 
 export const site = {

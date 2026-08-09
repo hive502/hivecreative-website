@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "Hive Creative, Websites for Small Businesses Without the Tech Headaches",
+    "description": "Done-for-you websites for small businesses and sole traders. Transparent upfront pricing from $499, plus a monthly Care Plan so you never have to worry about maintenance, hosting, or updates.",
+    "ogTitle": "A Professional Website That Brings You Customers, Without the Tech Headaches",
+    "ogDescription": "Transparent website packages from $499, with a separate monthly Care Plan that keeps your site secure and up to date."
+  },
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "work": "Our Work",
+    "contact": "Contact",
+    "cta": "See Our Packages",
+    "homeAria": "Hive Creative home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "footerNav": "Footer"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "es": "Español",
+    "switchTo": "Switch to Spanish"
+  },
+  "hero": {
+    "eyebrow": "Websites for Small Businesses",
+    "titleStart": "A Professional Website That",
+    "titleHighlight": "Brings You Customers",
+    "titleEnd": ", Without the Tech Headaches.",
+    "sub": "You focus on running your business. We will build a beautiful website that gets you found, and we will handle all the ongoing maintenance so you never have to stress about it breaking.",
+    "ctaPrimary": "See Our Packages",
+    "ctaSecondary": "How It Works",
+    "subtext": "Simple, transparent pricing for small businesses.",
+    "trust1": "Launch in 2 to 3 weeks",
+    "trust2": "Care Plan from $69/mo",
+    "trust3": "Built to get found",
+    "chipValue": "$499",
+    "chipLabel": "one-off builds from",
+    "imageAlt": "A relaxed small business owner smiling at his laptop in a sunlit workshop office"
+  },
+  "agitator": {
+    "eyebrow": "Sound familiar?",
+    "titleStart": "Let's be honest: building a website shouldn't feel like a",
+    "titleHighlight": "second full-time job.",
+    "lede": "Most small business owners we talk to are dealing with one of these three headaches:",
+    "points": [
+      {
+        "title": "The DIY Disaster",
+        "body": "You tried to build it yourself, but it just doesn't look quite right."
+      },
+      {
+        "title": "The Disappearing Act",
+        "body": "You hired a cheap freelancer, but now they won't answer emails."
+      },
+      {
+        "title": "The Digital Ghost Town",
+        "body": "You have a website, but it's not bringing in leads."
+      }
+    ],
+    "turnTitle": "It doesn't have to be this way.",
+    "turnBody": "We give you a done-for-you service with a long-term partner you can actually reach."
+  },
+  "process": {
+    "eyebrow": "The Hive process",
+    "title": "How It Works: Getting Online is Easy.",
+    "lede": "Three steps, no jargon, and no homework for you beyond a logo and a few details.",
+    "cta": "Start with Step 1",
+    "stepLabel": "Step",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Choose Your Plan",
+        "body": "Pick one of our transparent, upfront website packages starting at just $499. No hidden fees, no surprises."
+      },
+      {
+        "step": "02",
+        "title": "We Build It",
+        "body": "Hand over your logo and a few details. We'll design a modern, mobile-friendly site tailored to your brand."
+      },
+      {
+        "step": "03",
+        "title": "We Maintain It",
+        "body": "Once we launch, you have total peace of mind. Choose the monthly Care Plan that fits your business, starting at $69/mo, and we will handle your premium hosting, security updates, and daily backups so you never have to worry."
+      }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Recent builds",
+    "title": "Real sites, built for real small businesses.",
+    "lede": "Every one of these started the same way yours would: a logo, a few details, and a conversation.",
+    "shots": [
+      {
+        "label": "Osorio Insurance & Business",
+        "alt": "Homepage of Osorio Insurance and Business, headlined \"We protect what matters most\", with consultation and call buttons"
+      },
+      { "label": "Mobile, Homepage", "alt": "The Osorio Insurance and Business homepage on a phone" },
+      {
+        "label": "Dual-service layout",
+        "alt": "Two side-by-side service cards, one for insurance and one for tax and business services"
+      },
+      { "label": "Mobile, Services", "alt": "The insurance service card on a phone" },
+      { "label": "Mobile, About", "alt": "An about section introducing the founder, on a phone" }
+    ]
+  },
+  "caseStudy": {
+    "eyebrow": "Featured work",
+    "title": "See What A Great Website Can Do.",
+    "client": "Osorio Insurance & Business",
+    "paragraph1": "came to us with an awkward problem: two legally separate companies, one for insurance and one for tax and business services, that had to live under one roof without confusing customers or blurring the line between them.",
+    "paragraph2": "We built a bilingual site that opens in English or Spanish, splits the two businesses into clear side-by-side paths, and carries the compliance wording each one needs. The phone number stays one tap away on every screen, because in their business the call is the conversion.",
+    "stats": [
+      { "value": "EN / ES", "label": "Built in both languages" },
+      { "value": "Two", "label": "Businesses, one clear site" },
+      { "value": "One tap", "label": "To call from any page" }
+    ],
+    "cta": "I want a site like this",
+    "imageAlt": "The Osorio Insurance and Business website shown on a laptop and a phone"
+  },
+  "pricing": {
+    "eyebrow": "Website builds",
+    "title": "Transparent Pricing for Small Businesses.",
+    "lede": "A single upfront price for your build. No hourly billing, no scope games, no surprise invoices.",
+    "priceSuffix": "one-off build",
+    "cardFootnote": "Care Plan billed separately, from $69/mo",
+    "integrityNote": "Ongoing care and maintenance plans are a separate, required service to keep your site secure and are not included in the one-time base website build price.",
+    "seeCarePlans": "See the care plans",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "$499",
+        "tagline": "A sharp, credible presence for a brand-new business.",
+        "features": [
+          "Up to 4 Pages",
+          "Mobile-Responsive Design",
+          "Basic Contact Form",
+          "Basic SEO Setup"
+        ],
+        "cta": "Start with Starter"
+      },
+      {
+        "name": "Standard",
+        "price": "$899",
+        "tagline": "Room to tell your story and capture more enquiries.",
+        "features": [
+          "Up to 7 Pages",
+          "Mobile-Responsive Design",
+          "Advanced Lead-Capture",
+          "Basic Integrations"
+        ],
+        "cta": "Choose Standard"
+      },
+      {
+        "name": "Growth",
+        "price": "$1399",
+        "tagline": "For established businesses ready to scale their reach.",
+        "features": [
+          "Up to 12 Pages",
+          "Mobile-Responsive Design",
+          "CMS Setup",
+          "Advanced SEO"
+        ],
+        "cta": "Go with Growth"
+      }
+    ],
+    "mostPopular": "Most Popular"
+  },
+  "care": {
+    "eyebrow": "Ongoing care",
+    "title": "Ongoing Peace of Mind: Your Monthly Care Plan.",
+    "lede": "A website is like a car: it needs regular maintenance to run smoothly. That is why every site we build requires a Care Plan, billed monthly from $69 on top of your build price. You choose the level that fits you.",
+    "note": "Annual billing saves 15%. Care plans run for an initial 12 months from launch.",
+    "perMonth": "/mo",
+    "orYearly": "or",
+    "choose": "Choose",
+    "recommended": "Recommended",
+    "plans": [
+      {
+        "name": "Essential Care",
+        "monthly": "$69",
+        "yearly": "$704/year",
+        "saving": "Save 15%",
+        "tagline": "Everything your site needs to stay safe and online.",
+        "features": [
+          "Premium Hosting & SSL",
+          "Daily Backups",
+          "Security Monitoring",
+          "Up to 30 mins of text or photo changes",
+          "Email Support"
+        ]
+      },
+      {
+        "name": "Full Care",
+        "monthly": "$129",
+        "yearly": "$1,316/year",
+        "saving": "Save 15%",
+        "tagline": "Our most popular plan, more hands-on with faster answers.",
+        "features": [
+          "Everything in Essential Care",
+          "Priority Support",
+          "Up to 1 hr of updates per month",
+          "Monthly Health Check"
+        ]
+      },
+      {
+        "name": "Premium Care",
+        "monthly": "$179",
+        "yearly": "$1,826/year",
+        "saving": "Save 15%",
+        "tagline": "For businesses that change their site often.",
+        "features": [
+          "Everything in Full Care",
+          "Up to 2 hrs of updates per month",
+          "Faster response times"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Good questions",
+    "title": "The Things Everyone Asks Us.",
+    "lede": "Straight answers, no fine print.",
+    "stillWondering": "Still wondering about something?",
+    "emailUs": "Email us at",
+    "items": [
+      {
+        "q": "Do I own my website and domain name?",
+        "a": "100%. You own your domain name and your website content. If you ever decide to move on after your initial 12-month care plan, you can take it all with you."
+      },
+      {
+        "q": "Are domain name and hosting included?",
+        "a": "Premium hosting is fully included in all of our Care Plans. For your domain name, you will purchase and own this directly through a registrar like GoDaddy. We will handle all the technical work of connecting it to your new website for you."
+      },
+      {
+        "q": "Why do I need a monthly care plan?",
+        "a": "Websites are not set it and forget it. Things break, software gets outdated, and hackers look for vulnerabilities. Our care plans ensure your site is hosted, protected, backed up, and updated every month."
+      }
+    ]
+  },
+  "footer": {
+    "ctaTitle": "Ready for a website that actually works for your business?",
+    "ctaBody": "No tech stress. No disappearing freelancers. Just a professional site that brings you customers.",
+    "ctaPrimary": "Get Started Today",
+    "ctaSecondary": "See Our Packages",
+    "subtext": "Simple, transparent pricing for small businesses.",
+    "blurb": "Done-for-you websites for small businesses and sole traders, built properly and looked after every single month.",
+    "explore": "Explore",
+    "getInTouch": "Get in touch",
+    "rights": "All rights reserved.",
+    "tagline": "Websites without the tech headaches."
+  }
+}

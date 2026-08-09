@@ -47,7 +47,7 @@ export default function FaqAccordion({
         const panelId = `${baseId}-panel-${index}`;
 
         return (
-          <div key={item.question} className={isOpen ? 'bg-brand-paper/60' : 'bg-white'}>
+          <div key={item.question} className={isOpen ? 'bg-brand-bg/60' : 'bg-white'}>
             <h3>
               <button
                 type="button"
@@ -58,17 +58,17 @@ export default function FaqAccordion({
                 className="flex w-full items-center justify-between gap-6 px-6 py-6 text-left
                            transition-colors hover:bg-brand-navy-tint/50 focus-visible:outline
                            focus-visible:outline-2 focus-visible:-outline-offset-2
-                           focus-visible:outline-brand-orange sm:px-8"
+                           focus-visible:outline-brand-tangerine sm:px-8"
               >
-                <span className="text-base font-extrabold leading-snug text-brand-navy sm:text-lg">
+                <span className="text-base font-bold leading-snug text-brand-navy sm:text-lg">
                   {item.question}
                 </span>
                 <span
                   className={[
                     'flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300',
                     isOpen
-                      ? 'bg-brand-orange text-white rotate-180'
-                      : 'bg-brand-orange-tint text-brand-orange',
+                      ? 'bg-brand-tangerine text-white rotate-180'
+                      : 'bg-brand-tangerine-tint text-brand-tangerine',
                   ].join(' ')}
                   aria-hidden
                 >

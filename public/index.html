@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hive Creative</title>
+    <link rel="canonical" href="https://hivecreative.site/en/" />
+    <link rel="alternate" hreflang="en" href="https://hivecreative.site/en/" />
+    <link rel="alternate" hreflang="es" href="https://hivecreative.site/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://hivecreative.site/en/" />
+    <!--
+      Root redirect for the static export.
+
+      Every real page lives under /en/ or /es/. Nothing generates an index at "/", so
+      this hand-written file fills the gap. Cloudflare copies it verbatim from /public.
+
+      The meta refresh is the guaranteed fallback and works with JavaScript disabled.
+      The script below runs first and upgrades it: it reads the browser's language and
+      sends Spanish speakers to /es/, which is the one thing a static site loses by not
+      being able to run middleware.
+    -->
+    <meta http-equiv="refresh" content="0; url=/en/" />
+    <script>
+      (function () {
+        var lang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+        var target = lang.toLowerCase().indexOf('es') === 0 ? '/es/' : '/en/';
+        // replace() so the redirect does not add a history entry the Back button lands on
+        location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/en/">Hive Creative</a>.</p>
+  </body>
+</html>
